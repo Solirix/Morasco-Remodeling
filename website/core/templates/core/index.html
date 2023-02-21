@@ -1,18 +1,9 @@
-<!doctype html>
+{% extends 'core/base.html' %} <!-- This is the base template that all other pages will call-->
 
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% block title %}Morasco Remodeling{% endblock %} <!-- This is the title of the page-->
 
-        <script src="https://cdn.tailwindcss.com/1.4.6/tailwind.min.css"></script>
 
-        <title>Morasco Remodeling</title> <!-- title of the tab, not the url -->
-        </head>
-
-    <body>
-        <div class="px-6 py-6">
-            <h1> The front page</h1> <!-- text displayed on page -->
-        </div>
-    </body>
-</html>
+<!-- This is the content of the page -->
+{% block content %}
+    <h1>The front page</h1>
+{% endblock %}

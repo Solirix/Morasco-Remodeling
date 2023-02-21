@@ -1,0 +1,22 @@
+<!doctype html> <!-- this file will be used as a template for every html page (think top and bottom bar)-->
+<!-- the block code {% %} is just what will change on a per page basis. All of this stuff above it will be universal (for now)-->
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <script src="https://cdn.tailwindcss.com/1.4.6/tailwind.min.css"></script>
+        <!--link rel="stylesheet" href="path/to/our/css/file.css"-->
+
+        <title>{% block title %}{% endblock %}</title> <!-- title of the tab, not the url -->
+
+    </head>
+
+    <body>
+        <div class="px-6 py-6">
+            {% block content %}
+            {% endblock %}<!-- text displayed on page -->
+        </div>
+    </body>
+</html>
