@@ -20,6 +20,6 @@ from core.views import portfolio
 
 urlpatterns = [
     path('', index, name='index'), # add the index function to the urlpatterns list
-    path('', portfolio, name='portfolio'), # add the portfolio function to the urlpatterns list
+    path('portfolio/', portfolio, name='portfolio'), # add the portfolio function to the urlpatterns list
     path('admin/', admin.site.urls),
 ]
