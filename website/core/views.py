@@ -5,8 +5,10 @@ from django.http import HttpResponse
 # request -> respinse
 # request handler
 
+# this will be the home page
 def index(request):
     return render(request, 'core/index.html')
 
+# this will serve as the portfolios page
 def portfolio(request):
     return render(request, 'core/portfolio.html')
