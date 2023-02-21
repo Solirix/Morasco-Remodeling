@@ -16,8 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core.views import index # import the index function from core/views.py
+from core.views import portfolio # import the portfolio function from core/views.py
 
 urlpatterns = [
     path('', index, name='index'), # add the index function to the urlpatterns list
+    path('', portfolio, name='porfolio'), # add portfolio function to urlpatterns list
     path('admin/', admin.site.urls),
 ]
