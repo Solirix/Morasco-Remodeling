@@ -13,7 +13,10 @@ def index(request):
 def portfolio(request):
     return render(request, 'core/portfolio.html')
 
-# this will serve as the portfolios page
+# this will serve as the contact us page
 def contact(request):
     return render(request, 'core/contact.html')
 
+# this will serve as the about us page
+def about(request):
+    return render(request, 'core/about.html')
