@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core', # add the core app
+    'selenium', # add selenium
 ]
 
 MIDDLEWARE = [
