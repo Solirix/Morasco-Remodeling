@@ -1,10 +1,13 @@
 from django.test import TestCase
 
-# Create your tests here.
+# Create your tests here. 
 
-# In terminal, run the following command: "python manage.py test core" with quotes, or am I lying?
+# To run the enitre tests directory use: ./manage.py test core.tests
+# To run a specific test file use: ./manage.py test core.tests.test_name (without the .py extension)
+# DO NOT USE FORWARD SLASHES OR LIFE WILL BE PAINFUL
+# WHEN MAKING A NEW TEST FILE USE test_ AS THE PREFIX OR IT WILL NOT BE RECOGNIZED AS A TEST FILE
 
-class BasicTest(TestCase):
+class BasicTests(TestCase):
     # this will send a request to the home page
     def test_home_page_status_code(self):
         response = self.client.get('/') 
