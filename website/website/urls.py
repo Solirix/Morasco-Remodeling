@@ -29,4 +29,5 @@ urlpatterns = [
     path('services/', services, name='services'), # add the contact function to the urlpatterns list
 
     path('admin/', admin.site.urls),
+    path('services/', services, name='services'),
 ]

@@ -21,5 +21,8 @@ def contact(request):
 def about(request):
     return render(request, 'core/about.html')
 
+# this will serve the services page
+def services(request):
+    return render(request, 'core/services.html')
 def services(request):
     return render(request, 'core/services.html')
