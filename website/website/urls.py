@@ -19,11 +19,14 @@ from core.views import index # import the index function from core/views.py
 from core.views import portfolio
 from core.views import contact
 from core.views import about
+from core.views import services
 
 urlpatterns = [
     path('', index, name='index'), # add the index function to the urlpatterns list
     path('portfolio/', portfolio, name='portfolio'), # add the portfolio function to the urlpatterns list
     path('contact/', contact, name='contact'), # add the contact function to the urlpatterns list
     path('about/', about, name='about'), # add the contact function to the urlpatterns list
+    path('services/', services, name='services'), # add the contact function to the urlpatterns list
+
     path('admin/', admin.site.urls),
 ]
