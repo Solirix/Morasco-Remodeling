@@ -24,5 +24,3 @@ def about(request):
 # this will serve the services page
 def services(request):
     return render(request, 'core/services.html')
-def services(request):
-    return render(request, 'core/services.html')
