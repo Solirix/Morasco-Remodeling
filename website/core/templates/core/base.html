@@ -18,7 +18,7 @@
         <nav class ="py-6 px-6 flex justify-between items-center border-b border-gray-200">
           <div class="w-1/4 pr-20">
             {% load static %}
-            <img src="{% static 'core/images/.png' %}"> <!-- this is the logo -->
+            <img src="{% static 'core/images/mr_logo.png' %}"> <!-- this is the logo -->
           </div>  
           {% comment %} <a href="/" class="text-xl font-semibold">LOGO HERE</a> {% endcomment %}
 
@@ -34,37 +34,35 @@
             {% endblock %}
         </div>
 
-        <footer class="py-6 px-6 flex justify-center bg-gray-300">
-            <div class="w-full max-w-6xl flex justify-between items-center">
+        <footer class="py-6 px-6 items-center flex bg-gray-300 ">
+            
+          <div class="w-1/2 pr-20">
+            {% load static %}
+            <img src="{% static 'core/images/mr_logo.png' %}" width="250">
+          </div>
 
-              <div class="p-4">
-                {% load static %}
-                <img src="{% static 'core/images/mr_logo.png' %}">
-              </div>
+          <div class="w-1/2 pr-20">
+            <h3 class"mb-5 font-semibold text-gray-550">Morasco Remodeling: Create, Fix, Dream</h3>
+            <p class="text-lg text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget ali</p>
+          </div>
 
-              <div class="w-1/2 pr-20">
-                <h3 class"mb-5 font-semibold text-gray-550">Morasco Remodeling: Create, Fix, Dream</h3>
-                <p class="text-lg text-gray-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget ali</p>
-              </div>
+          <div class="w-1/4 pr-20">
+            <h3 class"mb-5 font-semibold text-gray-550">Menu</h3>
+            <ul class="text-gray-500">
+              <li><a href="#" class="text-lg text-gray-500 hover:text-gray-600">About</a></li>
+              <li><a href="#" class="text-lg text-gray-500 hover:text-gray-600">Contact</a></li>
+              <li><a href="https://www.thryv.com/client-privacy-policy/" class="text-lg text-gray-500 hover:text-gray-600">Privacy Policy</a></li>
+              <li><a href="https://www.thryv.com/client-terms-of-use/" class="text-lg text-gray-500 hover:text-gray-600">Term of Use</a></li>
+            </ul>
+          </div>
 
-              <div class="w-1/4 pr-20">
-                <h3 class"mb-5 font-semibold text-gray-550">Menu</h3>
-                <ul class="text-gray-500">
-                  <li><a href="#" class="text-lg text-gray-500 hover:text-gray-600">About</a></li>
-                  <li><a href="#" class="text-lg text-gray-500 hover:text-gray-600">Contact</a></li>
-                  <li><a href="https://www.thryv.com/client-privacy-policy/" class="text-lg text-gray-500 hover:text-gray-600">Privacy Policy</a></li>
-                  <li><a href="https://www.thryv.com/client-terms-of-use/" class="text-lg text-gray-500 hover:text-gray-600">Term of Use</a></li>
-                </ul>
-              </div>
-
-              <div class="w-1/4 pr-200">
-                <h3 class"mb-5 font-semibold text-gray-550">Pittsburgh Born and Raised</h3> <!-- maybe sub this title for Address -->
-                <p class="text-lg text-gray-500">Morasco Remodeling</p>
-                <p class="text-lg text-gray-500">North Huntingdon, PA</p>
-                <p class="text-lg text-gray-500">724-456-7890</p>
-              </div>
-
-            </div>
+          <div class="w-1/4 pr-200">
+            <h3 class"mb-5 font-semibold text-gray-550">Pittsburgh Born and Raised</h3> <!-- maybe sub this title for Address -->
+            <p class="text-lg text-gray-500">Morasco Remodeling</p>
+            <p class="text-lg text-gray-500">North Huntingdon, PA</p>
+            <p class="text-lg text-gray-500">724-456-7890</p>
+          </div>
+            
           </footer>
           
     </body>
