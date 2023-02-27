@@ -33,3 +33,11 @@ class BasicTests(TestCase):
     def test_contact_page_template(self):
         response = self.client.get('/contact/')
         self.assertTemplateUsed(response, 'core/contact.html')
+
+    def test_services_page_template(self):
+        response = self.client.get('/services/')
+        self.assertTemplateUsed(response, 'core/services.html')
+
+    def test_about_page_template(self):
+        response = self.client.get('/about/')
+        self.assertTemplateUsed(response, 'core/about.html')
