@@ -1,9 +1,6 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
-
-# Create your views here.
-# request -> respinse
-# request handler
+from .forms import ContactMe
 
 # this will be the home page
 def index(request):
@@ -13,9 +10,30 @@ def index(request):
 def portfolio(request):
     return render(request, 'core/portfolio.html')
 
+
+
+
+
 # this will serve as the contact us page
 def contact(request):
-    return render(request, 'core/contact.html')
+    if request.method =='POST':
+        form = ContactMe(request.POST)
+        
+        if form.is_valid():
+            form.save()
+            return redirect('/') # redirect to the home page
+
+    else:
+        form = ContactMe()
+
+        
+    return render(request, 'core/contact.html', {
+        'form': form
+    })
+
+
+
+
 
 # this will serve as the about us page
 def about(request):
