@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import include, path
 from core.views import index # import the index function from core/views.py
 from core.views import portfolio
 from core.views import contact
@@ -29,5 +29,6 @@ urlpatterns = [
     path('services/', services, name='services'), # add the contact function to the urlpatterns list
 
     path('admin/', admin.site.urls),
-    path('services/', services, name='services'),
+    # path('services/', services, name='services'),
+    path("__reload__/", include("django_browser_reload.urls")),
 ]

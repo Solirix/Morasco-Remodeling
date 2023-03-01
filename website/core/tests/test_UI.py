@@ -17,22 +17,4 @@ class TestUI(LiveServerTestCase):
 
         assert "Portfolio" in driver.title # check if the title of the page is "Portfolio"
 
-        # Find the image element
-        WebElement imageElement = driver.findElement(By.xpath("//img[@src='core/images/mr_logo.png']"));
-
-        # Get the width and height of the image
-        int width = imageElement.getSize().getWidth();
-        int height = imageElement.getSize().getHeight();
-
-        # Verify that the width and height of the image are correct
-        assertEquals(width, 300);
-        assertEquals(height, 100);
-
-        # Verify that all links on the page are working correctly
-        List<WebElement> links = driver.findElements(By.tagName("a"));
-        for (WebElement link : links) {
-            String href = link.getAttribute("href");
-            driver.get(href);
-            assertEquals(driver.getCurrentUrl(), href);
-        }
 

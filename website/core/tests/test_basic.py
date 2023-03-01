@@ -20,6 +20,14 @@ class BasicTests(TestCase):
     def test_contact_page_status_code(self):
         response = self.client.get('/contact/')
         self.assertEqual(response.status_code, 200)
+    
+    def test_services_page_status_code(self):
+        response = self.client.get('/services/')
+        self.assertEqual(response.status_code, 200)
+
+    def test_about_page_status_code(self):
+        response = self.client.get('/about/')
+        self.assertEqual(response.status_code, 200)
 
     # this will check if the index.html template is used
     def test_home_page_template(self):
@@ -41,3 +49,14 @@ class BasicTests(TestCase):
     def test_about_page_template(self):
         response = self.client.get('/about/')
         self.assertTemplateUsed(response, 'core/about.html')
+
+    # this will make sure the logo is using the proper link to the home page
+    def test_logo_link(self):
+        response = self.client.get('/')
+        self.assertContains(response, '<meta charset="utf-8">', html=True)
+        self.assertContains(response, '<meta name="viewport" content="width=device-width, initial-scale=1.0">', html=True)
+        self.assertContains(response, '<nav class ="py-6 px-6 flex justify-between items-center border-b border-gray-200">', html=True)
+        self.assertContains(response, '<div class="pr-20" id="logo-home-page">', html=True)
+        self.assertContains(response, '<a href="/">', html=True)
+        self.assertContains(response, '<img src="core/images/mr_logo.png" width="250">', html=True)
+    

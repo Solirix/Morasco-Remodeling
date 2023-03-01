@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'core', # add the core app
     'selenium', # add selenium
     'webdriver_manager', # add webdriver_manager
+    'django_browser_reload', # enable hot reloading
 ]
 
 MIDDLEWARE = [
@@ -51,6 +52,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
 ]
 
 ROOT_URLCONF = 'website.urls'
@@ -125,3 +127,8 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# add this so that the browser reloads when you save a file
+INTERNAL_IPS = [
+    "127.0.0.1",
+]
