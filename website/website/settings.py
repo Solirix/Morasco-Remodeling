@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'selenium', # add selenium
     'webdriver_manager', # add webdriver_manager
     'django_browser_reload', # enable hot reloading
+    'django.contrib.sessions', # add sessions
 ]
 
 MIDDLEWARE = [
