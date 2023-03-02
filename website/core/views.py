@@ -1,10 +1,15 @@
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
+from .models import Carousel
 from .forms import ContactMe
 
 # this will be the home page
 def index(request):
-    return render(request, 'core/index.html')
+    obj = Carousel.objects.all()
+    context = {
+        'obj': obj
+    }
+    return render(request, 'core/index.html', context)
 
 # this will serve as the portfolios page
 def portfolio(request):
