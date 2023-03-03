@@ -3,8 +3,8 @@
 {% block title %}Home{% endblock %}
 
 {% block content %}
-
-<!-- This is the carousel -->
+<body class="bg-gradient-to-b from-orange-100 to-blue-200">
+  <!-- This is the carousel -->
 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -13,8 +13,8 @@
   </div>
   <div class="carousel-inner">
     <div class="carousel-item active">
-        {% load static %}
-        <img src="{% static 'core/images/IMG_20161109_152215.jpg' %}" class="d-block w-100" alt="Image 1">
+      {% load static %}
+      <img src="{% static 'core/images/IMG_20161109_152215.jpg' %}" class="d-block w-100" alt="Image 1">
     </div>
     <div class="carousel-item">
       {% load static %}
@@ -35,8 +35,5 @@
   </button>
 </div>
 
-<div style="height: 750px;">
-    <body class="h-screen bg-gradient-to-b from-orange-100 to-slate-600" >
-</div>
 
 {% endblock %}
