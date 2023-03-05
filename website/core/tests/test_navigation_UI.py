@@ -52,3 +52,24 @@ class TestUI(LiveServerTestCase):
         time.sleep(2)
         assert "Contact" in self.driver.title
 
+    def test_bottom_navbar_links(self):
+        self.driver.get('http://127.0.0.1:8000/')
+        link = self.driver.find_element(By.ID, "about bottom nav")
+        link.click()
+        time.sleep(2)
+        assert "About" in self.driver.title
+
+        link = self.driver.find_element(By.ID, "contact bottom nav")
+        link.click()
+        time.sleep(2)
+        assert "Contact" in self.driver.title
+
+        link = self.driver.find_element(By.ID, "policy bottom nav")
+        link.click()
+        time.sleep(2)
+        assert "https://www.example.com/policy" == self.driver.current_url # this is the policy page
+
+        link = self.driver.find_element(By.ID, "terms bottom nav")
+        link.click()
+        time.sleep(2)
+        assert "https://www.example.com/terms" == self.driver.current_url # this is the terms page
