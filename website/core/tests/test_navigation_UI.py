@@ -7,8 +7,8 @@ from webdriver_manager.chrome import ChromeDriverManager # this line and the nex
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
-from django.test import TestCase
-from django.test.runner import DiscoverRunner
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.webdriver.support.ui import WebDriverWait
 
 
 class TestUI(LiveServerTestCase):
@@ -75,4 +75,18 @@ class TestUI(LiveServerTestCase):
         link.click()
         time.sleep(2)
         assert "https://www.example.com/terms" == self.driver.current_url # this is the terms page
-        
+
+    def test_background_services(self):
+        self.driver.get('http://127.0.0.1:8000/services/')
+        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        body_class = body_element.get_attribute("class")
+        assert "bg-gradient-to-b" in body_class
+        assert "from-orange-100" in body_class
+        assert "to-blue-200" in body_class
+    def test_homepage_background(self):
+        self.driver.get('http://127.0.0.1:8000/')
+        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        body_class = body_element.get_attribute("class")
+        assert "bg-gradient-to-b" in body_class
+        assert "from-orange-100" in body_class
+        assert "to-blue-200" in body_class
