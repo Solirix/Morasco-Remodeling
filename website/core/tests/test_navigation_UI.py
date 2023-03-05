@@ -31,6 +31,17 @@ class TestUI(LiveServerTestCase):
         logo.click()
         assert "Home" in self.driver.title
 
+    # ensure the same link works, but for the footer logo as well
+    def test_footer_image_link(self):
+        self.driver.get('http://127.0.0.1:8000/portfolio')
+        logo = self.driver.find_element(By.ID, "logo-footer")
+        time.sleep(2)
+        logo.click()
+        assert "Home" in self.driver.title
+
+
+
+
     # make sure the navbar links are clickable and take you to the correct page
     def test_navbar_links(self):
         self.driver.get('http://127.0.0.1:8000/')
@@ -85,6 +96,13 @@ class TestUI(LiveServerTestCase):
         assert "to-blue-200" in body_class
     def test_homepage_background(self):
         self.driver.get('http://127.0.0.1:8000/')
+        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        body_class = body_element.get_attribute("class")
+        assert "bg-gradient-to-b" in body_class
+        assert "from-orange-100" in body_class
+        assert "to-blue-200" in body_class
+    def test_background_about(self):
+        self.driver.get('http://127.0.0.1:8000/about/')
         body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
         body_class = body_element.get_attribute("class")
         assert "bg-gradient-to-b" in body_class
