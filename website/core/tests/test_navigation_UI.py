@@ -108,3 +108,10 @@ class TestUI(LiveServerTestCase):
         assert "bg-gradient-to-b" in body_class
         assert "from-orange-100" in body_class
         assert "to-blue-200" in body_class
+    def test_background_portfolio(self):
+        self.driver.get('http://127.0.0.1:8000/portfolio/')
+        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        body_class = body_element.get_attribute("class")
+        assert "bg-gradient-to-b" in body_class
+        assert "from-orange-100" in body_class
+        assert "to-blue-200" in body_class
