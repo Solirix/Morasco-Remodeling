@@ -49,4 +49,24 @@ class NavigationTest(TestCase):
             print('Link exists!')
         else:
             print('Link does not exist.')
-        
+
+        url = 'http://127.0.0.1:8000/contact/'
+        response = requests.get(url)
+        if response.status_code == 200:
+            print('Link exists!')
+        else:
+            print('Link does not exist.')
+
+        url = 'https://www.thryv.com/client-privacy-policy/'
+        response = requests.get(url)
+        if response.status_code == 200:
+            print('Link exists!')
+        else:
+            print('Link does not exist.')
+
+        url = 'https://www.thryv.com/client-terms-of-use/'
+        response = requests.get(url)
+        if response.status_code == 200:
+            print('Link exists!')
+        else:
+            print('Link does not exist.') 
