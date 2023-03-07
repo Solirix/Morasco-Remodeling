@@ -1,4 +1,5 @@
 from django.test import TestCase
+import time
 
 # Create your tests here. 
 
@@ -29,4 +30,20 @@ class TemplateTests(TestCase):
     
         response = self.client.get('/about/')
         self.assertTemplateUsed(response, 'core/about.html')
-    
+
+    # these will check if the correct background is being used for each page    
+    def test_template_backgrounds(self):
+        response = self.client.get('/')
+        self.assertContains(response, 'body class="bg-gradient-to-b from-orange-100 to-blue-200"')
+
+        response = self.client.get('/portfolio/')
+        self.assertContains(response, 'body class="bg-gradient-to-b from-orange-100 to-blue-200"')
+
+        response = self.client.get('/contact/')
+        self.assertContains(response, 'body class="bg-gradient-to-b from-orange-100 to-blue-200"')
+
+        response = self.client.get('/services/')
+        self.assertContains(response, 'body class="bg-gradient-to-b from-orange-100 to-blue-200"')
+
+        response = self.client.get('/about/')
+        self.assertContains(response, 'body class="bg-gradient-to-b from-orange-100 to-blue-200"')
