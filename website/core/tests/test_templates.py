@@ -47,3 +47,45 @@ class TemplateTests(TestCase):
 
         response = self.client.get('/about/')
         self.assertContains(response, 'body class="bg-gradient-to-b from-orange-100 to-blue-200"')
+    
+    # check to make sure the nav bar image is in use
+    def test_navbar_image(self):
+        response = self.client.get('/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="250"')
+
+        response = self.client.get('/portfolio/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="250"')
+
+        response = self.client.get('/contact/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="250"')
+
+        response = self.client.get('/services/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="250"')
+
+        response = self.client.get('/about/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="250"')
+
+
+    # check to make sure the footer image is in use
+    def test_footer_image(self):
+        response = self.client.get('/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="300"')
+
+        response = self.client.get('/portfolio/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="300"')
+
+        response = self.client.get('/contact/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="300"')
+
+        response = self.client.get('/services/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="300"')
+
+        response = self.client.get('/about/')
+        self.assertContains(response, 'img src="/static/core/images/mr_logo.png" width="300"')
+
+    # check to make sure the correct paragraph is being used for each footer header
+    def test_footer_headers(self):
+        response = self.client.get('/')
+        self.assertContains(response, 'class="mt-3 mb-2 font-semibold text-gray-550">Morasco Remodeling: Create, Fix, Dream')
+        self.assertContains(response, 'class="mb-2 font-semibold text-gray-550"')
+        self.assertContains(response, 'class="mb-2 font-semibold text-gray-550"')
