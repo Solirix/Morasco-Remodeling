@@ -1,7 +1,9 @@
+#THIS IS VIEWS.py
 from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from .models import Carousel
 from .forms import ContactMe
+from django.contrib import messages
 
 # this will be the home page
 def index(request):
@@ -15,29 +17,18 @@ def index(request):
 def portfolio(request):
     return render(request, 'core/portfolio.html')
 
-
-
-
-
 # this will serve as the contact us page
 def contact(request):
-    if request.method =='POST':
+    if request.method == 'POST':
         form = ContactMe(request.POST)
-        
         if form.is_valid():
             form.save()
-            return redirect('/') # redirect to the home page
-
+            messages.success(request, 'Your message has been sent!')
+            return redirect('index')
     else:
         form = ContactMe()
 
-        
-    return render(request, 'core/contact.html', {
-        'form': form
-    })
-
-
-
+    return render(request, 'core/contact.html', {'form': form})
 
 
 # this will serve as the about us page

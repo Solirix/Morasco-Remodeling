@@ -1,52 +1,52 @@
-{% extends 'core/base.html' %} <!-- This is the base template that all other pages will call-->
+{% comment %} THIS IS THE CONTACT.html {% endcomment %}
+{% extends 'core/base.html' %}
 
-{% block title %}Contact{% endblock %} <!-- This is the title of the page-->
+{% block title %}Contact{% endblock %}
 
-
-<!-- This is the content of the page -->
 {% block content %}
 <div style="height: 750px;">
-    <body class="h-screen bg-gradient-to-b from-orange-100 to-blue-200 onclick="window.location.href='/'"";>
+    <body class="h-screen bg-gradient-to-b from-orange-100 to-blue-200">
         <div class="w-1/2 my-6 mx-auto p-6 bg-gray-100 rounded-xl">
-    <hi class="mb-6 text-3xl">Contact us</h1><br>
-    
+            <h1 class="mb-6 text-3xl">Contact us</h1><br>
 
-    <form method ="post" action=".">
-        {% csrf_token %}
+            <form id="my-form" method="post" action="{% url 'contact' %}">
+                {% csrf_token %}
 
-        <div class="mb-3">
-            <label class="inline-block mb-2"><br>Name</label><br>
-            {{ form.name }}
+                <div class="mb-3">
+                    <label class="inline-block mb-2"><br>Name</label><br>
+                    {{ form.name }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="inline-block mb-2">Email</label><br>
+                    {{ form.email }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="inline-block mb-2">Description</label><br>
+                    {{ form.description }}
+                </div>
+
+                {% if form.errors or form.non_field_errors %}
+                    <div class="mb-3 p-6 bg-red-100 rounded-xl">
+                        {% for field in form %}
+                            {{ field.errors }}
+                        {% endfor %}
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+
+                <button type="submit" id="my-button" class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-gray">Submit</button>
+            </form>
         </div>
-
-        <div class="mb-3">
-            <label class="inline-block mb-2">Email</label><br>
-            {{ form.email }}
-        </div>
-
-        <div class="mb-3">
-            <label class="inline-block mb-2">Description</label><br>
-            {{ form.description }}
-        </div>
-
-
-        {% if form.errors or form.non_field_errors %}
-            <div class="mb-3 p-6 bg-red-100 rounded-xl">
-                
-                {% for field in form %}
-                    {{ field.errors }}
-                {% endfor %}
-
-                {{ form.non_field_errors }}
-            </div>
-        {%endif%} 
-        
-
-
-        <button class="py-4 px-8 text-lg bg-teal-500 hover:bg-teal-700 rounded-xl text-gray">Submit</button>
-    </form>
-
-    </div>
-    </a>
+    </body>
 </div>
+
+<script>
+    document.getElementById("my-form").addEventListener("submit", function(event) {
+        event.preventDefault();
+        document.getElementById("my-form").reset();
+        window.location.href = "{% url 'index' %}?form_submitted=true";
+    });
+</script>
 {% endblock %}
