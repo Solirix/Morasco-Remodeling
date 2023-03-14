@@ -43,11 +43,15 @@ INSTALLED_APPS = [
     'webdriver_manager', # add webdriver_manager
     'django_browser_reload', # enable hot reloading
     'django.contrib.sessions', # add sessions
+    'debug_toolbar', # add debug toolbar
+    'template_timings_panel', # add template profiler panel
+    'pympler', # add pymbler
 ]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -132,4 +136,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # add this so that the browser reloads when you save a file
 INTERNAL_IPS = [
     "127.0.0.1",
+]
+
+DEBUG_TOOLBAR_PANELS = [
+    'debug_toolbar.panels.timer.TimerPanel',
+    'template_timings_panel.panels.TemplateTimings.TemplateTimings',
+    'debug_toolbar.panels.sql.SQLPanel',
+    'pympler.panels.MemoryPanel',
 ]
