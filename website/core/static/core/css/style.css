@@ -18,3 +18,82 @@ EXAMPLE OF HOW TO ADD THE CSS FILE TO AN HTML FILE:
 <link rel="stylesheet" href="{% static 'core/css/style.css' %}"> //didn't test this yet */
 
 
+/* --NAV BAR BEGIN-- */
+
+.contianer {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;;
+}
+
+/* spacing & centering for the content inside the nav */
+.entire_nav_container {
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    display: flex; /* this line and the next two is like typing "flex justify-center items-center" */
+    align-items: center;
+    justify-content: space-between;
+}
+
+.right_side_nav_container {
+    
+    margin-left: 1.5rem;
+}
+
+.our_nav {
+    position: fixed;
+    background-color:rgb(255 237 213);
+    border-bottom-width: 1px;
+    border-color: #e5e7eb;
+}
+
+/* nav as a whole, the bar, not the elements in it */
+nav {
+    width: 100%;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1;
+}
+
+/* define the clickable button styling */
+.buttons {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    padding-right: 1.5rem;
+}
+
+.buttons:hover {
+    color: #6B7280;
+}
+
+.contact_us_button {
+    background-color: #FBBF24;
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.contact_us_button:hover {
+    color: #6B7280;
+}
+
+
+  
+
+/* --END NAV BAR-- */
+
+
+
+/* BACKGROUND GRADIENT FOR EVERY PAGE */
+
+.background {
+    background-image: linear-gradient(to bottom, rgb(255 237 213), rgb(191 219 254));
+}
