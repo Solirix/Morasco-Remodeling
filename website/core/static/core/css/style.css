@@ -97,3 +97,35 @@ nav {
 .background {
     background-image: linear-gradient(to bottom, rgb(255 237 213), rgb(191 219 254));
 }
+
+
+
+
+
+/* Carousel */
+.carousel-item:first-child,
+.carousel-item:nth-child(2),
+.carousel-item:nth-child(3) {
+position: relative;
+}
+
+.carousel-item:first-child .carousel-caption,
+.carousel-item:nth-child(2) .carousel-caption,
+.carousel-item:nth-child(3) .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px #000000;
+  }
+
+  .carousel-caption h5 {
+    font-size: 24px;
+  }
+/* END Carousel */
+
+  
+  
