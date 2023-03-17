@@ -18,3 +18,121 @@ EXAMPLE OF HOW TO ADD THE CSS FILE TO AN HTML FILE:
 <link rel="stylesheet" href="{% static 'core/css/style.css' %}"> //didn't test this yet */
 
 
+/* Footer */
+/* Footer Section */
+/* Styles for the footer */
+footer {
+    margin-bottom: 0rem;
+    padding: 1rem;
+    position: relative;
+    background-color: #D1D5DB;
+  }
+  
+  /* Styles for the logo */
+  #logo-footer img {
+    width: 300px;
+  }
+  
+  /* Styles for the headers */
+  /*Morasco Remodeling:Create,Fix,Dream header*/
+  h3 {
+    margin-top: -5rem;
+    margin-left: 25rem; 
+    font-weight: 600;
+    color: #4B5563;
+    max-width: 20rem;
+  }
+
+  /*Menu header*/
+  h4 {
+    margin-left: 50rem;
+    font-weight: 600;
+    color: #4B5563;
+    margin-top: -5rem;
+  }
+
+  /*Pittsburgh born and raised header*/
+  h5 {
+    margin-top: -7.2rem;
+    margin-left: 70rem;
+    font-weight: 600;
+    color: #4B5563;
+  }
+  
+  /* Styles for the text */
+  /*"If it's not good enough for my home, it's not good enough for your home!"*/
+  p {
+    margin-left: 25rem;
+    font-size: 1.125rem;
+    color: #6B7280;
+    max-width: 20rem;
+    padding-bottom: 1rem;
+  }
+
+  /*"Morasco Remodeling... address and phone# "*/
+  p1 {
+    margin-left: 70rem;
+    font-size: 1.125rem;
+    color: #6B7280;
+    max-width: 20rem;
+  }
+  
+  /* Styles for the links */
+  a {
+    text-decoration: none;
+    color: #6B7280;
+  }
+  
+  a:hover {
+    color: #374151;
+  }
+  
+  /* Styles for the unordered list */
+  ul {
+    list-style: none; 
+  }
+  
+  /* Styles for the list items */
+  li {
+    margin-left: 50rem;  
+  }
+
+ 
+  
+  /* Styles for the container */
+  .container {
+    margin: 0 auto;
+    max-width: 350px; 
+  }
+  
+  /* Styles for the space between elements */
+  .space-x-6 > * + * {
+    margin-left: 1.5rem;
+  }
+  
+  /* Styles for the flexbox */
+  .flex {
+    display: flex;
+  }
+  
+  /* Styles for the items inside the flexbox */
+  .items-center {
+    align-items: center;
+  }
+  
+  .justify-between {
+    justify-content: space-between;
+  }
+  
+  /* Styles for the media query */
+  @media (min-width: 768px) {
+    .md\:flex {
+      display: flex;
+    }
+  }
+  
+  
+  
+  
+  
+  
