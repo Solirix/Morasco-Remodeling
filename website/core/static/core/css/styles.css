@@ -76,8 +76,11 @@ img {
 #div_below_nav_filler {
     height: 100px;
 }
-  
-@media screen and (max-width: 450px) {
+
+/* Firefox: hamburger menu top right, click it. Click more tools, click responsive deign mode. have yourself a day. */
+/* This media section right here is for all screen sizes between 361px and 800px. Anything below 361 gets the query below this one.
+Anything above 800 gets our default config which should be fine.*/
+@media screen and (max-width: 800px) { 
     /* notice how everyhting in this media query is all classes in the actual nav bar.
     also notice how only the things i change are in here. for example, in the contact_us_button, the only things that change are what you see in this
     media query. I didn't put the button color in here. Know why? Because it doesn't need to change based on size. The font size does tho. Same with padding.
@@ -120,13 +123,13 @@ img {
         padding: 4px;
         border-radius: 4px;
         transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-        margin-right: 32px;
+        margin-right: 1px;
     }
 
     .buttons {
         font-size: 0.7rem;
         font-weight: 600;
-        padding-right: 0.5rem;
+        padding-right: 0.4rem;
     }
 
     nav {
@@ -134,7 +137,7 @@ img {
     }
 
     #div_below_nav_filler {
-        height: 40px;
+        height: 50px;
     }
 }
 
@@ -175,7 +178,4 @@ position: relative;
   .carousel-caption h5 {
     font-size: 24px;
   }
-/* END Carousel */
-NAV{
-    color: blue;
-}
+/* END Carousel */ 
