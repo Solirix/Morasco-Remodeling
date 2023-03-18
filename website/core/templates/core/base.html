@@ -105,21 +105,3 @@
 
     </body>
 </html>
-{% if messages %}
-  <script>
-    {% for message in messages %}
-      var message_text = "{{ message }}";
-      var message_tag = "{{ message.tags }}";
-      var alertClass = "";
-      if (message_tag == "success") {
-        alertClass = "bg-green-500";
-      } else if (message_tag == "warning") {
-        alertClass = "bg-yellow-500";
-      } else if (message_tag == "error") {
-        alertClass = "bg-red-500";
-      }
-      var alert = '<div class="fixed top-0 right-0 px-4 py-2 mt-4 mr-4 text-white rounded '+ alertClass +'">'+ message_text +'</div>';
-      document.body.insertAdjacentHTML("afterbegin", alert);
-    {% endfor %}
-  </script>
-{% endif %}
