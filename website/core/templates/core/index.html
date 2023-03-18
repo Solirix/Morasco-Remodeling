@@ -15,12 +15,11 @@
     </span>
   </div>
 {% endif %}
-
+<!--the reason those 3 little bars go overtop of the nav bar is likely because they have a higher z-index. doesn't seem like we have access to the class
+it uses tho. The class is called "carousel-indicators"-->
 
 <head>
   <style>
-
-
       .alert {
         position: fixed;
         top: 0;
@@ -73,7 +72,7 @@
           font-weight: bold;
           padding: 2px 2px;
           border-radius: 5px;
-          z-index: 1;
+          z-index: 0;
           width: 100%;
           text-align: center;
         }
@@ -90,7 +89,7 @@
 <!--body class="bg-gradient-to-b from-orange-100 to-blue-200"-->
   <!-- This is the carousel -->
 <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" data-bs-interval="5000">
-  <div class="carousel-indicators">
+  <div class="carousel-indicators" style="z-index: 1">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>

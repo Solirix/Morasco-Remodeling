@@ -31,25 +31,25 @@
     </head>
 
     <body class="background">
-        <nav class="our_nav">
-          <div class="entire_nav_container">
-              <div id="logo">
-                <a href="/">
-                  {% load static %}
-                  <img src="{% static 'core/images/normal_sized/mr_logo.png' %}" width="250"> <!-- this is the logo -->
-                </a>
-              </div>
-            
-            <div>
-              <a href="/services/" class="buttons">Services</a>
-              <a href="/portfolio/" class="buttons">Portfolio</a>
-              <a href="/about/" class="buttons">About Us</a>
-              <a href="/contact/" class="contact_us_button">Contact Us</a>
+      <nav>
+        <div class="entire_nav_container">
+            <div id="logo">
+              <a href="/">
+                {% load static %}
+                <img src="{% static 'core/images/normal_sized/mr_logo.png' %}"> <!-- this is the logo -->
+              </a>
             </div>
+          
+          <div>
+            <a href="/services/" class="buttons">Services</a>
+            <a href="/portfolio/" class="buttons">Portfolio</a>
+            <a href="/about/" class="buttons">About Us</a>
+            <a href="/contact/" class="contact_us_button">Contact Us</a>
           </div>
-        </nav>
+        </div>
+      </nav>
       
-      <div style="height: 100px"></div>
+      <div id="div_below_nav_filler"></div>
         
 
         {% comment %} WHERE OTHER PAGES ARE GOING TO LOAD (IN BETWEEN) {% endcomment %}
