@@ -58,43 +58,37 @@
           {% endblock %}
         </div>
       
-
-        <footer class="p-6 relative bg-gray-300">
-          <div class="flex items-center justify-between">
-          <a href="/"> 
-          <div id="logo-footer">
-            {% load static %}
-            <img src="{% static 'core/images/normal_sized/mr_logo.png' %}" width="300">
+        {% load static %}
+        <footer>
+          <link rel="stylesheet" href={% static 'core/css/style.css' %}>
+          <div id="footer-container">
+            <div style="height: 6rem">
+            </div>
+            <div id="footer-content">
+              <div id="footer-description">
+                <h3>Morasco Remodeling: Create, Fix, Dream</h3>
+                <p>If it's not good enough for MY home, it's not good enough for YOUR home.</p>
+              </div>
+        
+              <div id="footer-menu">
+                <h4>Menu</h4>
+                <ul>
+                  <li><a href="/about/" id="about bottom nav">About</a></li>
+                  <li><a href="/contact/" id="contact bottom nav">Contact</a></li>
+                  <li><a href="https://www.thryv.com/client-privacy-policy/" id="privacy bottom nav">Privacy Policy</a></li>
+                  <li><a href="https://www.thryv.com/client-terms-of-use/" id="terms bottom nav">Term of Use</a></li> 
+                </ul>
+              </div>
+        
+              <div id="footer-address">
+                <h5>Pittsburgh Born and Raised</h5> <!-- maybe sub this title for Address -->
+                <p1>Morasco Remodeling</p1>
+                <p1>North Huntingdon, PA</p1>
+                <p1>724-456-7890</p1>
+              </div>       
+            </div> 
           </div>
-          </a>
-
-          <div class="flex items-center space-x-6 md:flex">
-          <div class="p-6 relative container mx-auto " style="max-width: 350px">
-            <h3 class="mt-3 mb-2 font-semibold text-gray-550">Morasco Remodeling: Create, Fix, Dream</h3>
-            <p class="text-lg text-gray-500">
-              If it's not good enough for MY home, it's not good enough for YOUR home.
-            </p>
-          </div>
-
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-550">Menu</h3>
-            <ul class="text-gray-500">
-              <li><a href="/about/" class="text-lg text-gray-500 hover:text-gray-600" id="about bottom nav">About</a></li>
-              <li><a href="/contact/" class="text-lg text-gray-500 hover:text-gray-600" id="contact bottom nav">Contact</a></li>
-              <li><a href="https://www.thryv.com/client-privacy-policy/" class="text-lg text-gray-500 hover:text-gray-600" id="privacy bottom nav">Privacy Policy</a></li>
-              <li><a href="https://www.thryv.com/client-terms-of-use/" class="text-lg text-gray-500 hover:text-gray-600" id="terms bottom nav">Term of Use</a></li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 class="mb-2 font-semibold text-gray-550">Pittsburgh Born and Raised</h3> <!-- maybe sub this title for Address -->
-            <p class="text-lg text-gray-500">Morasco Remodeling</p>
-            <p class="text-lg text-gray-500">North Huntingdon, PA</p>
-            <p class="text-lg text-gray-500">724-456-7890</p>
-          </div>
-          </div>
-          </div>
-            
+        
         </footer>
 
         <!-- JavaScript libraries -->
@@ -104,21 +98,3 @@
 
     </body>
 </html>
-{% if messages %}
-  <script>
-    {% for message in messages %}
-      var message_text = "{{ message }}";
-      var message_tag = "{{ message.tags }}";
-      var alertClass = "";
-      if (message_tag == "success") {
-        alertClass = "bg-green-500";
-      } else if (message_tag == "warning") {
-        alertClass = "bg-yellow-500";
-      } else if (message_tag == "error") {
-        alertClass = "bg-red-500";
-      }
-      var alert = '<div class="fixed top-0 right-0 px-4 py-2 mt-4 mr-4 text-white rounded '+ alertClass +'">'+ message_text +'</div>';
-      document.body.insertAdjacentHTML("afterbegin", alert);
-    {% endfor %}
-  </script>
-{% endif %}
