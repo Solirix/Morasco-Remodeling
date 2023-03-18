@@ -36,8 +36,8 @@ footer {
   /* Styles for the headers */
   /*Morasco Remodeling:Create,Fix,Dream header*/
   h3 {
-    margin-top: -5rem;
-    margin-left: 25rem; 
+    margin-top: -4rem;
+    margin-left: 5rem; 
     font-weight: 600;
     color: #4B5563;
     max-width: 20rem;
@@ -45,16 +45,16 @@ footer {
 
   /*Menu header*/
   h4 {
-    margin-left: 50rem;
+    margin-left: 57.3rem;
     font-weight: 600;
     color: #4B5563;
-    margin-top: -5rem;
+    margin-top: -7rem;
   }
 
   /*Pittsburgh born and raised header*/
   h5 {
-    margin-top: -7.2rem;
-    margin-left: 70rem;
+    margin-top: -10rem;
+    margin-left: 96rem;
     font-weight: 600;
     color: #4B5563;
   }
@@ -62,7 +62,7 @@ footer {
   /* Styles for the text */
   /*"If it's not good enough for my home, it's not good enough for your home!"*/
   p {
-    margin-left: 25rem;
+    margin-left: 5rem;
     font-size: 1.125rem;
     color: #6B7280;
     max-width: 20rem;
@@ -71,7 +71,7 @@ footer {
 
   /*"Morasco Remodeling... address and phone# "*/
   p1 {
-    margin-left: 70rem;
+    margin-left: 96rem;
     font-size: 1.125rem;
     color: #6B7280;
     max-width: 20rem;
@@ -89,12 +89,12 @@ footer {
   
   /* Styles for the unordered list */
   ul {
-    list-style: none; 
+    margin-bottom: 4rem; 
   }
   
   /* Styles for the list items */
   li {
-    margin-left: 50rem;  
+    margin-left: 57.3rem;  
   }
 
  
