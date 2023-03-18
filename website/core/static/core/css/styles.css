@@ -1,0 +1,181 @@
+/* WHEN YOU WRITE YOUR CSS IN HERE AND DON"T SAY WHAT IT"S FOR, SHAME ON YOU TRULY.*/
+/* FOR EXAMPLE, WHEN I WRITE THE NAV BAR CSS, I WILL MKAE SURE YOU KNOW THATS WHAT IT'S FOR:
+
+-- START NAV BAR CSS --
+
+CSS
+CSS
+CSS
+CSS
+
+-- END NAV BAR CSS -- 
+
+IF YOU WRITE CSS THAT YOU THINK WILL BE USEFUL FOR EVERY PAGE, TEXT THE GROUP CHAT OR MAKE A COMMENT, DON'T BE A PLEB ABOUT IT.
+
+EXAMPLE OF HOW TO ADD THE CSS FILE TO AN HTML FILE:
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'core/css/style.css' %}"> //didn't test this yet */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --NAV BAR BEGIN-- */
+
+nav {
+    width: 100%;
+    padding: 4px;
+    padding-left: 15px;
+    padding-right: 15px;
+    z-index: 1;
+    background-color:rgb(255 237 213);
+    border-color: #e5e7eb;
+    position: fixed;
+    border-bottom-width: 1.5px;
+}
+
+.entire_nav_container {
+    display: flex; /* this line and the next two is like typing "flex justify-center items-center" */
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* define the clickable button styling */
+.buttons {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    padding-right: 1.5rem;
+}
+
+.buttons:hover {
+    color: #6B7280;
+}
+
+.contact_us_button {
+    background-color: #FBBF24;
+    font-size: 1.125rem;  
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.contact_us_button:hover {
+    color: #6B7280;
+}
+
+img {
+    width: 250px;
+}
+
+#div_below_nav_filler {
+    height: 100px;
+}
+
+/* Firefox: hamburger menu top right, click it. Click more tools, click responsive deign mode. have yourself a day. */
+/* This media section right here is for all screen sizes between 361px and 800px. Anything below 361 gets the query below this one.
+Anything above 800 gets our default config which should be fine.*/
+@media screen and (max-width: 800px) { 
+    /* notice how everyhting in this media query is all classes in the actual nav bar.
+    also notice how only the things i change are in here. for example, in the contact_us_button, the only things that change are what you see in this
+    media query. I didn't put the button color in here. Know why? Because it doesn't need to change based on size. The font size does tho. Same with padding.
+    Hopefully I explained this well. if you're wondering where im getting pixel size (for query) from, its that firefox tool mentioned above. Lmk if you need help. */
+    img {
+        width: 100px;
+    }
+    .contact_us_button {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 4px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-right: 20px;
+    }
+
+    .buttons {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding-right: 0.5rem;
+    }
+
+    nav {
+        padding-left: 5px;
+    }
+
+    #div_below_nav_filler {
+        height: 40px;
+    }
+
+}  
+
+@media screen and (max-width: 360px) {
+    img {
+        width: 100px;
+    }
+    .contact_us_button {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding: 4px;
+        border-radius: 4px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+        margin-right: 1px;
+    }
+
+    .buttons {
+        font-size: 0.7rem;
+        font-weight: 600;
+        padding-right: 0.4rem;
+    }
+
+    nav {
+        padding-left: 5px;
+    }
+
+    #div_below_nav_filler {
+        height: 50px;
+    }
+}
+
+/* --END NAV BAR-- */
+
+
+
+/* BACKGROUND GRADIENT FOR EVERY PAGE */
+
+.background {
+    background-image: linear-gradient(to bottom, rgb(255 237 213), rgb(191 219 254));
+}
+
+
+
+
+
+/* Carousel */
+.carousel-item:first-child,
+.carousel-item:nth-child(2),
+.carousel-item:nth-child(3) {
+position: relative;
+}
+
+.carousel-item:first-child .carousel-caption,
+.carousel-item:nth-child(2) .carousel-caption,
+.carousel-item:nth-child(3) .carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-weight: bold;
+    font-size: 3rem;
+    text-shadow: 2px 2px 2px #000000;
+  }
+
+  .carousel-caption h5 {
+    font-size: 24px;
+  }
+/* END Carousel */ 
