@@ -52,11 +52,12 @@
       <div style="height: 100px"></div>
         
 
-      
+        {% comment %} WHERE OTHER PAGES ARE GOING TO LOAD (IN BETWEEN) {% endcomment %}
         <div class="p-6">
           {% block content %}
           {% endblock %}
         </div>
+        {% comment %} WHERE OTHER PAGES ARE GOING TO LOAD (IN BETWEEN) {% endcomment %}
       
 
         <footer class="p-6 relative bg-gray-300">
