@@ -35,8 +35,7 @@
         <div class="entire_nav_container">
             <div id="logo">
               <a href="/">
-                {% load static %}
-                <img src="{% static 'core/images/normal_sized/mr_logo.png' %}"> <!-- this is the logo -->
+                <img class= "nav_img" src="{% static 'core/images/normal_sized/mr_logo.png' %}"> <!-- this is the logo -->
               </a>
             </div>
           
@@ -57,6 +56,7 @@
           {% block content %}
           {% endblock %}
         </div>
+        
         {% comment %} WHERE OTHER PAGES ARE GOING TO LOAD (IN BETWEEN) {% endcomment %}
       
         {% load static %}
@@ -74,7 +74,7 @@
               <div id="footer-menu">
                 <h4 class="footmenu">Menu</h4>
                 <ul>
-                  <li><a href="/about/" id="about bottom nav">About</a></li>
+                  <li><a href="/about/" id="about bottom nav" class="footer_links">About</a></li>
                   <li><a href="/contact/" id="contact bottom nav">Contact</a></li>
                   <li><a href="https://www.thryv.com/client-privacy-policy/" id="privacy bottom nav">Privacy Policy</a></li>
                   <li><a href="https://www.thryv.com/client-terms-of-use/" id="terms bottom nav">Term of Use</a></li> 
@@ -83,9 +83,9 @@
         
               <div id="footer-address">
                 <h5 class="yinzer">Pittsburgh Born and Raised</h5> <!-- maybe sub this title for Address -->
-                <p1>Morasco Remodeling</p1>
-                <p1>North Huntingdon, PA</p1>
-                <p1>724-456-7890</p1>
+                <p1 class="footer_p1">Morasco Remodeling</p1>
+                <p1 class="footer_p1">North Huntingdon, PA</p1>
+                <p1 class="footer_p1">724-456-7890</p1>
               </div>       
             </div> 
           </div>
