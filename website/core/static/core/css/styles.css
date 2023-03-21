@@ -336,13 +336,13 @@ position: relative;
   overflow: hidden;
 }
 .daddy-perry {
-  margin-top: 100px;
+  margin-top: 25px;
   margin-left: 100px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 45%;
   transform: skewY(3deg); 
 }
 .slanted-title {
@@ -352,7 +352,7 @@ position: relative;
   left: 50%;
   transform: skewY(3deg) translate(-50%, -50%);
   z-index: 1;
-  margin-left: 5%; /* changed this line to mess with location left right where its located */
+  margin-left: 10%; /* changed this line to mess with location left right where its located */
 
 }
 .slanted-text-container{
@@ -362,7 +362,7 @@ position: relative;
   left: 50%;
   transform: skewY(3deg) translate(-50%, -50%);
   z-index: 1;
-  margin-left: 10%;
+  margin-left: 12%;
 }
 .slanted-container {
   padding-top: 100px;
