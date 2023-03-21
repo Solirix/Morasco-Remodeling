@@ -151,10 +151,6 @@ Anything above 800 gets our default config which should be fine.*/
     background-image: linear-gradient(to bottom, rgb(255 237 213), rgb(191 219 254));
 }
 
-
-
-
-
 /* Carousel */
 .carousel-item:first-child,
 .carousel-item:nth-child(2),
@@ -177,8 +173,9 @@ position: relative;
 
   .carousel-caption h5 {
     font-size: 24px;
+    
   }
-/* END Carousel */ 
+  /* END Carousel */
 
 /* Footer */
 /* Footer Section */
@@ -214,7 +211,7 @@ footer {
   }
 
   /*Pittsburgh born and raised header*/
-  h5 {
+  .yinzer {
     margin-top: -10rem;
     margin-left: 96rem;
     font-weight: 600;
@@ -223,7 +220,7 @@ footer {
   
   /* Styles for the text */
   /*"If it's not good enough for my home, it's not good enough for your home!"*/
-  p {
+  .homes {
     margin-left: 5rem;
     font-size: 1.125rem;
     color: #6B7280;
@@ -292,3 +289,4 @@ footer {
       display: flex;
     }
   }
+
