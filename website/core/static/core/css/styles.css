@@ -194,7 +194,7 @@ footer {
   
   /* Styles for the headers */
   /*Morasco Remodeling:Create,Fix,Dream header*/
-  h3 {
+  .moto {
     margin-top: -4rem;
     margin-left: 5rem; 
     font-weight: 600;
@@ -203,7 +203,7 @@ footer {
   }
 
   /*Menu header*/
-  h4 {
+  .footmenu {
     margin-left: 57.3rem;
     font-weight: 600;
     color: #4B5563;
