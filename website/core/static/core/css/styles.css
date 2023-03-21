@@ -229,7 +229,7 @@ footer {
   }
 
   /*"Morasco Remodeling... address and phone# "*/
-  p1 {
+  .footer_p1 {
     margin-left: 96rem;
     font-size: 1.125rem;
     color: #6B7280;
@@ -237,12 +237,12 @@ footer {
   }
   
   /* Styles for the links */
-  a {
+  .footer_links {
     text-decoration: none;
     color: #6B7280;
   }
   
-  a:hover {
+  .footer_links:hover {
     color: #374151;
   }
   
