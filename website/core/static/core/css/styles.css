@@ -21,6 +21,7 @@ EXAMPLE OF HOW TO ADD THE CSS FILE TO AN HTML FILE:
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 /* --NAV BAR BEGIN-- */
@@ -35,6 +36,7 @@ nav {
     border-color: #e5e7eb;
     position: fixed;
     border-bottom-width: 1.5px;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,.2);
 }
 
 .entire_nav_container {
@@ -69,9 +71,11 @@ nav {
     color: #6B7280;
 }
 
-img {
+.nav_img {
     width: 250px;
+    margin-right: 10px;
 }
+
 
 #div_below_nav_filler {
     height: 100px;
@@ -80,12 +84,12 @@ img {
 /* Firefox: hamburger menu top right, click it. Click more tools, click responsive deign mode. have yourself a day. */
 /* This media section right here is for all screen sizes between 361px and 800px. Anything below 361 gets the query below this one.
 Anything above 800 gets our default config which should be fine.*/
-@media screen and (max-width: 800px) { 
+@media screen and (max-width: 850px) { 
     /* notice how everyhting in this media query is all classes in the actual nav bar.
     also notice how only the things i change are in here. for example, in the contact_us_button, the only things that change are what you see in this
     media query. I didn't put the button color in here. Know why? Because it doesn't need to change based on size. The font size does tho. Same with padding.
     Hopefully I explained this well. if you're wondering where im getting pixel size (for query) from, its that firefox tool mentioned above. Lmk if you need help. */
-    img {
+    .nav_img {
         width: 100px;
     }
     .contact_us_button {
@@ -113,8 +117,8 @@ Anything above 800 gets our default config which should be fine.*/
 
 }  
 
-@media screen and (max-width: 360px) {
-    img {
+@media screen and (max-width: 480px) {
+    .nav_img {
         width: 100px;
     }
     .contact_us_button {
@@ -137,21 +141,158 @@ Anything above 800 gets our default config which should be fine.*/
     }
 
     #div_below_nav_filler {
-        height: 50px;
+        height: 40px;
     }
+
+    #entire_nav_container {
+        justify-content: none;
+    }
+
 }
 
 /* --END NAV BAR-- */
 
+/* --START SERVICES PAGE-- */
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    justify-content: space-between;
+}
 
 
-/* BACKGROUND GRADIENT FOR EVERY PAGE */
+.service_container {
+    margin-bottom: 200px;
+    border: 3px solid #6B7280;
+    border-radius: 10px;
+    height: 300px;
+    width: 500px;
+    background-color: #ffffff;
+    opacity: 0.7;
+} 
+
+.service_heading {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.service_text {
+    width: 400px;
+    margin-left: 50px;
+    font-size: 1.25rem;
+    padding-bottom: 10px;
+    margin-right: 50px;
+}
+
+.services_images {
+    height: 300px;
+    width: 400px;
+    border-radius: 10px;
+    opacity: 0.7;
+}
+
+#services_page_header {
+    font-size: 3.0rem;
+    font-weight: bold;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 70px;
+    display: flex;
+}
+
+@media screen and (max-width: 850px) {
+    .service_container {
+        margin-bottom: 50px;
+        border: 3px solid #6B7280;
+        border-radius: 10px;
+        height: 200px;
+        width: 500px;
+        align-items: center;
+    }
+
+    .service_text {
+        font-size: 1.0rem;
+    }
+
+    .services_images {
+        height: 200px;
+        width: 100px;
+        border-radius: 10px;
+    }
+
+    .container {
+        position: relative;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #services_page_header {
+        font-size: 1.70rem;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+
+    .services_images {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .service_container {
+        margin-bottom: 50px;
+        border: 3px solid #6B7280;
+        border-radius: 10px;
+        height: 200px;
+        width: 275px;
+    }
+
+    .service_text {
+        width: 200px;
+        margin-left: 40px;
+        font-size: 0.7rem;
+        padding-bottom: 10px;
+        margin-right: 30px;
+    }
+
+    .container {
+        position: relative;
+        flex-direction: column;
+    }
+
+    #services_page_header {
+        font-size: 1.70rem;
+        font-weight: bold;
+        padding-bottom: 30px;
+    }
+
+    .services_images {
+        display: none;
+    }
+
+}
+/* --END SERVICES PAGE --*/
+
+
+/* --BACKGROUND GRADIENT-- */
 
 .background {
     background-image: linear-gradient(to bottom, rgb(255 237 213), rgb(191 219 254));
 }
 
-/* Carousel */
+/* --END BACKGROUND GRADIENT-- */
+
+
+
+/* --CAROUSEL-- */
 .carousel-item:first-child,
 .carousel-item:nth-child(2),
 .carousel-item:nth-child(3) {
@@ -175,9 +316,10 @@ position: relative;
     font-size: 24px;
     
   }
-  /* END Carousel */
+/* --END CAROUSEL-- */ 
 
-/* Footer */
+
+ /* Footer */
 /* Footer Section */
 /* Styles for the footer */
 footer {
@@ -255,14 +397,6 @@ footer {
   li {
     margin-left: 57.3rem;  
   }
-
- 
-  
-  /* Styles for the container */
-  .container {
-    margin: 0 auto;
-    max-width: 350px; 
-  }
   
   /* Styles for the space between elements */
   .space-x-6 > * + * {
@@ -283,10 +417,3 @@ footer {
     justify-content: space-between;
   }
   
-  /* Styles for the media query */
-  @media (min-width: 768px) {
-    .md\:flex {
-      display: flex;
-    }
-  }
-

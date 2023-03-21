@@ -5,108 +5,51 @@
 {% block title %}Services{% endblock %}
 
 {% block content %}
-<head>
-    <style>
-        .blur-image {
-            transition: 0.5s;
-            opacity: 0.7;
-            width: 125px;
-            height: 125px;
-            border-radius: 12.5%;
-          }
-          
-          .blur-image:hover {
-            opacity: 1;
-          }
-          
-          .banner {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.5);
-            color: #ffffff;
-            font-weight: bold;
-            padding: 2px 2px;
-            border-radius: 5px;
-            z-index: 1;
-            width: 100%;
-            text-align: center;
-          }
-          
-          .relative {
-            margin: 10px;
-          }
-          
-    </style>
-</head>
 
 <body>
-    <div class="flex justify-center items-center mt-4">
-        <div class="relative">
-            <img src="{% static 'core/images/Squared/PXL_20210908_193124241(1).jpg' %}" class="blur-image">
-            <div class="banner">BATHROOMS</div>
-          </div>
+  
+    <h id="services_page_header">What We Can Do For You</h>
+  
+    <div class="container">
+        <div class="service_container">
+          <h1 class="service_heading">Remodeling</h1>
+          <p class="service_text">Kitchens, bathrooms, game rooms, interior and exterior doors, glass block,
+            flooring, closet and storage organization, shelving, suspended ceilings, framing, drywall,
+            interior painting, décor hanging (picture frames, blinds, window dressings, etc.)
+          </p>
+        </div>
 
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/IMG_20180509_162146(1).jpg' %}" class="blur-image">
-            <div class="banner">DECKS</div>
-          </div>
-          
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/IMG_20161109_152215(1).jpg' %}" class="blur-image">
-            <div class="banner">BASEMENTS</div>
-          </div>
+        <img src="{% static 'core/images/normal_sized/deck-with-seats.jpg' %}" class="services_images">
+        
+        <div class="service_container">
+          <h2 class="service_heading">Repairs</h2>
+          <p class="service_text">Plumbing, electrical, drywall, ceilings, cabinetry... if it can be fixed, I can fix it. If it
+            can’t be fixed, I can replace it
+          </p>
+        </div>
+      </div>
 
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">ELECTRICAL</div>
-          </div>
 
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">VENTILATION</div>
-          </div>
+      <div class="container">
+        <div class="service_container">
+          <h3 class="service_heading">Household Installations</h3>
+          <p class="service_text">Fixtures (faucets, shower valves, tub spouts, etc.), disposals,
+            stoves, dishwashers, icemaker/water fridge lines, over-the-range microwaves,
+            washer/dryers, lighting (recessed and surface mount), ceiling fans, electrical switches and
+            receptacles, 240 volt lines for EV fast chargers.
+          </p>
+        </div>
+        
+        <img src="{% static 'core/images/normal_sized/wood-wall-basement.jpg' %}" class="services_images">
 
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">HOME REPAIRS</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-           <div class="banner">FENCES</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">RAILINGS</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">DOORS</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">FLOORING</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">PAINTING</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">STAIRS</div>
-          </div>
-
-          <div class="relative">
-            <img src="{% static 'core/images/Squared/aserapig(1).png' %}" class="blur-image">
-            <div class="banner">KITCHENS</div>
-          </div>
-    </div>
+        <div class="service_container">
+          <h4 class ="service_heading">Electronics Installations</h3>
+          <p class="service_text">(Eufy© camera systems, Ring© doorbells and camera systems,
+            Google© Nest doorbells and cameras) Flat panel TV’s, audio components and wire-hiding
+            solutions, built in surround speakers, custom AV installations.
+          </p>
+        </div>
+      </div>
+    
 </body>
 {% endblock %}
