@@ -471,3 +471,11 @@ footer {
     justify-content: space-between;
   }
   
+  .container-under {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+  }
+  
