@@ -318,6 +318,55 @@ position: relative;
   }
 /* --END CAROUSEL-- */ 
 
+/*SLANTED ART */
+.slanted-shape {
+  position: relative;
+  /* border-top: 5px solid gray;
+  border-bottom: 5px solid gray;  do that to bold the tops and bottoms*/
+
+  height: 450px;
+  width: 100%;
+  background-color: white;
+  transform: skewY(-3deg);
+  overflow: hidden;
+}
+.daddy-perry {
+  margin-top: 25px;
+  margin-left: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 45%;
+  transform: skewY(3deg); 
+}
+.slanted-title {
+  padding-top: 25px;
+  position: absolute;
+  top: 25% ; /* changed this line to mess with heigfht where its located */
+  left: 50%;
+  transform: skewY(3deg) translate(-50%, -50%);
+  z-index: 1;
+  margin-left: 10%; /* changed this line to mess with location left right where its located */
+
+}
+.slanted-text-container{
+
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: skewY(3deg) translate(-50%, -50%);
+  z-index: 1;
+  margin-left: 12%;
+}
+.slanted-container {
+  padding-top: 100px;
+  padding-bottom: 250px;
+}
+
+
+/* SLANTED ART */
+
 /* --F BEGIN-- */
 
 footer {
