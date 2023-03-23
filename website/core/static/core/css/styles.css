@@ -22,6 +22,7 @@ EXAMPLE OF HOW TO ADD THE CSS FILE TO AN HTML FILE:
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-family: 'Roboto Condensed', sans-serif;
 }
 
 /* --NAV BAR BEGIN-- */
@@ -173,7 +174,7 @@ Anything above 800 gets our default config which should be fine.*/
     height: 300px;
     width: 500px;
     background-color: #ffffff;
-    opacity: 0.7;
+    opacity: 0.8;
 } 
 
 .service_heading {
@@ -196,7 +197,7 @@ Anything above 800 gets our default config which should be fine.*/
     height: 300px;
     width: 400px;
     border-radius: 10px;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 #services_page_header {
@@ -279,13 +280,60 @@ Anything above 800 gets our default config which should be fine.*/
     }
 
 }
-/* --END SERVICES PAGE --*/
+/* --END SERVICES PAGE-- */
+
+/* --START PORTFOLIO PAGE-- */
+
+.port_container {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+    padding-left: 20rem;
+    padding-right: 20rem;
+}
+
+.bradley_photos {
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+.portfolio_text_blocks {
+  position: relative;
+  bottom: 35px;
+  background-color: #6B7280;
+  border: 3px solid #6B7280;
+  border-radius: 10px;
+  opacity: 0.95;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 175px;
+  margin: auto;
+}
+
+.before_and_after_heading {
+    font-size: 2.2rem;
+    text-align: center;
+}
+
+
+
+/* --END PORTFOLIO PAGE-- */
 
 
 /* --BACKGROUND GRADIENT-- */
 
 .background {
-    background-image: linear-gradient(to bottom, rgb(255 237 213), rgb(191 219 254));
+    background-image: linear-gradient(rgb(255 237 213), rgb(191 219 254));
 }
 
 /* --END BACKGROUND GRADIENT-- */
@@ -369,88 +417,51 @@ position: relative;
 
 /* --F BEGIN-- */
 
-footer {
-    background-color: #D1D5DB;
-    margin-top: 50px;
-    width: 100%;
-    padding-right: 200px;
-    padding-left: 200px;
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
 .entire_footer_container {
+    position: relative;
+    width: 100%;
+    min-height: 100px;
+    padding: 20px 50px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    text-align: center;
+    flex-direction: column;
 }
 
-#center_header {
-    margin-top: 20px;
-    font-size: 1.0rem;
-    font-weight: bold;
-}
+.menu {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+  }
 
-#left_header {
-    margin-top: 7px;
-    font-size: 1.0rem;
-    font-weight: bold;
-}
-
-#right_header {
-    margin-top: 10px;
-    font-size: 1.0rem;
-    font-weight: bold;
-}
-
-.menu_text {
-    margin-top: 0px;
-    font-size: 0.9rem;
-}
-
-.menu_text:hover {
+.menu__link {
+    font-size: 1.2rem;
+    margin: 0 10px;
+    display: inline-block;
+    transition: 0.5s;
+    font-weight: 300;
+  }
+  
+  .menu__link:hover {
     color: #6B7280;
-}
+  }
 
-.left_and_right_text {
-    font-size: 0.9rem;
-}
-
-#create_dream_box {
-    display: ruby-text;
-}
-
-@media screen and (max-width: 850px) {
-    footer {
-        display: none;
-    }
-
-}
+  .entire_footer_container p {
+    margin: 15px 0 10px 0;
+    font-size: 1rem;
+    font-weight: 300;
+  }
 
 @media screen and (max-width: 480px) {
-    
-    footer {
-        padding-left: 50px;
-        padding-right: 50px;
-        display: none;
+    .menu__link {
+        font-size: 0.80rem;
     }
 
-    #left_header,
-    #center_header,
-    #right_header {
-        font-size: 0.8rem;
-    }
-
-    .menu_text,
-    .left_and_right_text {
-        font-size: 0.6rem;
-    }
-
-    #create_dream_box {
-        display: none;
+    .entire_footer_container p {
+        font-size: 0.80rem;
     }
 
 }
