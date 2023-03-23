@@ -1,10 +1,11 @@
 {% extends 'core/base.html' %}
 
-{% block title %}Home{% endblock %}
-
-{% block head %}
-
+{% load static %} <!-- load the static library -->
+{% block extrahead %}
+<link rel="stylesheet" href={% static 'core/css/index.css' %}>
 {% endblock %}
+
+{% block title %}Home{% endblock %}
 
 {% block content %}
 

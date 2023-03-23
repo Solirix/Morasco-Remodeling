@@ -1,6 +1,9 @@
 {% extends 'core/base.html' %}
 
 {% load static %} <!-- load the static library -->
+{% block extrahead %}
+<link rel="stylesheet" href={% static 'core/css/portfolio.css' %}>
+{% endblock %}
 
 {% block title %}Portfolio{% endblock %}
 

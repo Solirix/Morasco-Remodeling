@@ -155,7 +155,7 @@ Anything above 800 gets our default config which should be fine.*/
 
 /* --START SERVICES PAGE-- */
 
-.container {
+/* .container {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -279,12 +279,12 @@ Anything above 800 gets our default config which should be fine.*/
         display: none;
     }
 
-}
+} */
 /* --END SERVICES PAGE-- */
 
 /* --START PORTFOLIO PAGE-- */
 
-.port_container {
+/* .port_container {
     position: relative;
     display: flex;
     flex-direction: row;
@@ -323,7 +323,7 @@ Anything above 800 gets our default config which should be fine.*/
 .before_and_after_heading {
     font-size: 2.2rem;
     text-align: center;
-}
+} */
 
 
 
@@ -341,7 +341,7 @@ Anything above 800 gets our default config which should be fine.*/
 
 
 /* --CAROUSEL-- */
-.carousel-item:first-child,
+/* .carousel-item:first-child,
 .carousel-item:nth-child(2),
 .carousel-item:nth-child(3) {
 position: relative;
@@ -363,16 +363,16 @@ position: relative;
   .carousel-caption h5 {
     font-size: 24px;
     
-  }
+  } */
 /* --END CAROUSEL-- */ 
 
 /*SLANTED ART */
-.slanted-shape {
+/*.slanted-shape {
   position: relative;
-  /* border-top: 5px solid gray;
-  border-bottom: 5px solid gray;  do that to bold the tops and bottoms*/
+  border-top: 5px solid gray;
+  border-bottom: 5px solid gray;  /*do that to bold the tops and bottoms*/
 
-  height: 450px;
+  /* height: 450px;
   width: 100%;
   background-color: white;
   transform: skewY(-3deg);
@@ -392,12 +392,12 @@ position: relative;
   padding-top: 25px;
   position: absolute;
   top: 25% ; /* changed this line to mess with heigfht where its located */
-  left: 50%;
+  /* left: 50%;
   transform: skewY(3deg) translate(-50%, -50%);
   z-index: 1;
   margin-left: 10%; /* changed this line to mess with location left right where its located */
 
-}
+/* }
 .slanted-text-container{
 
   position: absolute;
@@ -410,7 +410,7 @@ position: relative;
 .slanted-container {
   padding-top: 100px;
   padding-bottom: 250px;
-}
+}   */ 
 
 
 /* SLANTED ART */
