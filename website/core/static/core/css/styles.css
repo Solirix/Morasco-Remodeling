@@ -31,7 +31,7 @@ nav {
     padding: 4px;
     padding-left: 15px;
     padding-right: 15px;
-    z-index: 1;
+    z-index: 1000000;
     background-color:rgb(255 237 213);
     border-color: #e5e7eb;
     position: fixed;
@@ -318,164 +318,92 @@ position: relative;
   }
 /* --END CAROUSEL-- */ 
 
+/* --F BEGIN-- */
 
-
-
-
-
-/* SLANTED ART */
-.slanted-shape {
-  position: relative;
-  /* border-top: 5px solid gray;
-  border-bottom: 5px solid gray;  do that to bold the tops and bottoms*/
-
-  height: 450px;
-  width: 100%;
-  background-color: white;
-  transform: skewY(-3deg);
-  overflow: hidden;
-}
-.daddy-perry {
-  margin-top: 25px;
-  margin-left: 100px;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 45%;
-  transform: skewY(3deg); 
-}
-.slanted-title {
-  padding-top: 25px;
-  position: absolute;
-  top: 25% ; /* changed this line to mess with heigfht where its located */
-  left: 50%;
-  transform: skewY(3deg) translate(-50%, -50%);
-  z-index: 1;
-  margin-left: 10%; /* changed this line to mess with location left right where its located */
-
-}
-.slanted-text-container{
-
-  position: absolute;
-  top: 55%;
-  left: 50%;
-  transform: skewY(3deg) translate(-50%, -50%);
-  z-index: 1;
-  margin-left: 12%;
-}
-.slanted-container {
-  padding-top: 100px;
-  padding-bottom: 250px;
-}
-
-
-/* SLANTED ART */
-
-
-/* Footer */
-/* Footer Section */
-/* Styles for the footer */
 footer {
-    margin-bottom: 0rem;
-    padding: 1rem;
-    position: relative;
     background-color: #D1D5DB;
-  }
-  
-  /* Styles for the logo */
-  #logo-footer img {
-    width: 300px;
-  }
-  
-  /* Styles for the headers */
-  /*Morasco Remodeling:Create,Fix,Dream header*/
-  .moto {
-    margin-top: -4rem;
-    margin-left: 5rem; 
-    font-weight: 600;
-    color: #4B5563;
-    max-width: 20rem;
-  }
+    margin-top: 50px;
+    width: 100%;
+    padding-right: 200px;
+    padding-left: 200px;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
 
-  /*Menu header*/
-  .footmenu {
-    margin-left: 57.3rem;
-    font-weight: 600;
-    color: #4B5563;
-    margin-top: -7rem;
-  }
-
-  /*Pittsburgh born and raised header*/
-  .yinzer {
-    margin-top: -10rem;
-    margin-left: 96rem;
-    font-weight: 600;
-    color: #4B5563;
-  }
-  
-  /* Styles for the text */
-  /*"If it's not good enough for my home, it's not good enough for your home!"*/
-  .homes {
-    margin-left: 5rem;
-    font-size: 1.125rem;
-    color: #6B7280;
-    max-width: 20rem;
-    padding-bottom: 1rem;
-  }
-
-  /*"Morasco Remodeling... address and phone# "*/
-  .footer_p1 {
-    margin-left: 96rem;
-    font-size: 1.125rem;
-    color: #6B7280;
-    max-width: 20rem;
-  }
-  
-  /* Styles for the links */
-  .footer_links {
-    text-decoration: none;
-    color: #6B7280;
-  }
-  
-  .footer_links:hover {
-    color: #374151;
-  }
-  
-  /* Styles for the unordered list */
-  ul {
-    margin-bottom: 4rem; 
-  }
-  
-  /* Styles for the list items */
-  li {
-    margin-left: 57.3rem;  
-  }
-  
-  /* Styles for the space between elements */
-  .space-x-6 > * + * {
-    margin-left: 1.5rem;
-  }
-  
-  /* Styles for the flexbox */
-  .flex {
+.entire_footer_container {
     display: flex;
-  }
-  
-  /* Styles for the items inside the flexbox */
-  .items-center {
-    align-items: center;
-  }
-  
-  .justify-between {
+    flex-direction: row;
     justify-content: space-between;
-  }
-  
-  .container-under {
-    display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction: column;
-    height: 100%;
-  }
-  
+    text-align: center;
+}
+
+#center_header {
+    margin-top: 20px;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+#left_header {
+    margin-top: 7px;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+#right_header {
+    margin-top: 10px;
+    font-size: 1.0rem;
+    font-weight: bold;
+}
+
+.menu_text {
+    margin-top: 0px;
+    font-size: 0.9rem;
+}
+
+.menu_text:hover {
+    color: #6B7280;
+}
+
+.left_and_right_text {
+    font-size: 0.9rem;
+}
+
+#create_dream_box {
+    display: ruby-text;
+}
+
+@media screen and (max-width: 850px) {
+    footer {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    
+    footer {
+        padding-left: 50px;
+        padding-right: 50px;
+        display: none;
+    }
+
+    #left_header,
+    #center_header,
+    #right_header {
+        font-size: 0.8rem;
+    }
+
+    .menu_text,
+    .left_and_right_text {
+        font-size: 0.6rem;
+    }
+
+    #create_dream_box {
+        display: none;
+    }
+
+}
+
+/* --F END-- */

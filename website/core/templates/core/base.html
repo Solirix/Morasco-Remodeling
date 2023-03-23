@@ -59,37 +59,36 @@
         
         {% comment %} WHERE OTHER PAGES ARE GOING TO LOAD (IN BETWEEN) {% endcomment %}
       
-        {% load static %}
+
         <footer>
-          <link rel="stylesheet" href={% static 'core/css/styles.css' %}>
-          <div id="footer-container">
-            <div style="height: 6rem">
+
+          <div class="entire_footer_container">
+          
+            <div id="create_dream_box">
+              <h1 id="left_header">Morasco Remodeling: Create, Fix, Dream</h3>
+              <p class="left_and_right_text">
+                If it's not good enough for MY home, it's not good enough for YOUR home.
+              </p>
             </div>
-            <div id="footer-content">
-              <div id="footer-description">
-                <h3 class="moto">Morasco Remodeling: Create, Fix, Dream</h3>
-                <p class="homes">If it's not good enough for MY home, it's not good enough for YOUR home.</p>
-              </div>
-        
-              <div id="footer-menu">
-                <h4 class="footmenu">Menu</h4>
-                <ul>
-                  <li><a href="/about/" id="about bottom nav" class="footer_links">About</a></li>
-                  <li><a href="/contact/" id="contact bottom nav">Contact</a></li>
-                  <li><a href="https://www.thryv.com/client-privacy-policy/" id="privacy bottom nav">Privacy Policy</a></li>
-                  <li><a href="https://www.thryv.com/client-terms-of-use/" id="terms bottom nav">Term of Use</a></li> 
-                </ul>
-              </div>
-        
-              <div id="footer-address">
-                <h5 class="yinzer">Pittsburgh Born and Raised</h5> <!-- maybe sub this title for Address -->
-                <p1 class="footer_p1">Morasco Remodeling</p1>
-                <p1 class="footer_p1">North Huntingdon, PA</p1>
-                <p1 class="footer_p1">724-456-7890</p1>
-              </div>       
-            </div> 
+
+            <div>
+              <h2 id="center_header">Menu</h3>
+              <ul>
+                <li class="menu_text"><a href="/about/" class= id="about bottom nav">About</a></li>
+                <li class="menu_text"><a href="/contact/"  id="contact bottom nav">Contact</a></li>
+                <li class="menu_text"><a href="https://www.thryv.com/client-privacy-policy/"  id="privacy bottom nav">Privacy Policy</a></li>
+                <li class="menu_text"><a href="https://www.thryv.com/client-terms-of-use/"  id="terms bottom nav">Term of Use</a></li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 id="right_header">Pittsburgh Born and Raised</h3> <!-- maybe sub this title for Address -->
+              <p class="left_and_right_text">Morasco Remodeling</p>
+              <p class="left_and_right_text">North Huntingdon, PA</p>
+              <p class="left_and_right_text">724-433-8514</p>
+            </div>
           </div>
-        
+
         </footer>
 
         <!-- JavaScript libraries -->
