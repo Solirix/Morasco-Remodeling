@@ -21,6 +21,9 @@ firebase.initializeApp(firebaseConfig);
 //reference the database. Given name contactForm
 var contactFormDB = firebase.database().ref('contactForm')
 
+//For alert fade
+const alert = document.querySelector('.alert');
+
 //calls submitForm function when submit button is clicked
 document.getElementById('contactForm').addEventListener('submit', submitForm);
 
@@ -35,12 +38,12 @@ function submitForm(e){
 
     saveMessage(name, email, phone, message);
 
+    alert.classList.add('show');
     //alert the user what happened
-    document.querySelector('.alert').style.display = "block";
 
     //remove alert after 3 seconds
     setTimeout(() => {
-        document.querySelector(".alert").style.display = "none";
+        alert.classList.remove('show');
     }, 8000);
 
     //emptying out the form
