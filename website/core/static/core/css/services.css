@@ -44,12 +44,38 @@
 }
 
 #services_page_header {
-    font-size: 3.0rem;
+    font-size: 4.0rem;
     font-weight: bold;
     justify-content: center;
     padding-top: 20px;
     padding-bottom: 70px;
     display: flex;
+}
+
+.didnt_see_container {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+#didnt_see_text {
+    padding-top: 70px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#ask_us_today {
+    background-color: #FBBF24;
+    font-size: 1.125rem;  
+    font-weight: 600;
+    padding: 12px;
+    border-radius: 12px;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    margin-bottom: 100px;
+}
+
+.ask_us_today:hover {
+    color: #6B7280;
 }
 
 @media screen and (max-width: 850px) {
@@ -120,6 +146,20 @@
 
     .services_images {
         display: none;
+    }
+
+    #didnt_see_text {
+        font-size: 1.25rem;
+        font-weight: bold;
+    }
+    
+    #ask_us_today {
+        background-color: #FBBF24;
+        font-size: 1rem;  
+        font-weight: 600;
+        padding: 12px;
+        border-radius: 12px;
+        transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     }
 
 }

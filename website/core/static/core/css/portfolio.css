@@ -1,3 +1,12 @@
+#port_heading {
+    font-size: 4rem;
+    font-weight: bold;
+    justify-content: center;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    display: flex;
+}
+
 .port_container {
     position: relative;
     display: flex;
@@ -11,11 +20,11 @@
     padding-right: 20rem;
 }
 
-.bradley_photos {
+.port_photos {
     height: 400px;
     width: 500px;
     border-radius: 10px;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 .portfolio_text_blocks {
@@ -37,4 +46,120 @@
 .before_and_after_heading {
     font-size: 2.2rem;
     text-align: center;
+}
+
+.reviews_container {
+    text-align: center;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    margin-bottom: 100px;
+    margin-top: 25px;
+}
+
+.reviews {
+    font-size: 1.3rem;
+}
+
+.signature {
+    font-size: 1rem;
+    padding-top: 0.7rem;
+    font-style: italic;
+    border-bottom: 1px solid black;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+}
+
+@media screen and (max-width: 850px) {
+    #port_heading {
+        font-size: 4rem;
+    }
+
+    .port_container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .port_photos {
+        height: 200px;
+        width: 300px;
+    }
+
+    .portfolio_text_blocks {
+        bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 75px;
+      }
+
+      .before_and_after_heading {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+
+    .reviews_container {
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 100px;
+        margin-top: 25px;
+    }
+    
+    .reviews {
+        font-size: 1rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    #port_heading {
+        font-size: 3rem;
+    }
+
+    .port_container {
+        padding-left: .1rem;
+        padding-right: .1rem;
+    }
+
+    .port_photos {
+        height: 125px;
+        width: 150px;
+    }
+
+    .portfolio_text_blocks {
+        bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        width: 75px;
+      }
+
+      .before_and_after_heading {
+        font-size: 1.15rem;
+        text-align: center;
+    }
+
+    .reviews_container {
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin-bottom: 100px;
+        margin-top: 25px;
+    }
+    
+    .reviews {
+        font-size: 1rem;
+    }
+
+    .signature {
+        font-size: 0.7rem;
+        padding-top: 0.7rem;
+        font-style: italic;
+        border-bottom: 1px solid black;
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+    }
+
 }
