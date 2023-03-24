@@ -443,16 +443,18 @@ position: relative;
     display: inline-block;
     transition: 0.5s;
     font-weight: 300;
+    color: #6B7280;
   }
   
   .menu__link:hover {
-    color: #6B7280;
+    color: black;
   }
 
   .entire_footer_container p {
     margin: 15px 0 10px 0;
     font-size: 1rem;
     font-weight: 300;
+    color: #6B7280;
   }
 
 @media screen and (max-width: 480px) {
