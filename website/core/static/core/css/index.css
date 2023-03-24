@@ -36,13 +36,15 @@ position: relative;
 .daddy-perry {
   margin-top: 25px;
   margin-left: 100px;
-
   display: flex;
   justify-content: center;
   align-items: center;
   width: 45%;
-  transform: skewY(3deg); 
+  transform: skewY(3deg);
+  opacity: 0; /* Set the initial opacity to 0 */
+  transition: opacity 4s ease; /* Add a transition effect */ 
 }
+
 .slanted-title {
   padding-top: 25px;
   position: absolute;
