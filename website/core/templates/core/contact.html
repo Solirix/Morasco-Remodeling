@@ -17,21 +17,22 @@
 
     <div class="hero">
 
-        <form>
+        <form action="" id = "contactForm">
             <div class="row">
+                <div class="alert">Message sent, we'll be with you soon!</div>
                 <div class="input-group">
                     <input type="text" id="name" required>
-                    <label for="name">Full Name</label>
+                    <label for="name">Your Name</label>
                 </div>
                 <div class="input-group">
                     <input type="text" id="number" required>
-                    <label for="number">Phone Number</label>
+                    <label for="number">Your Phone Number</label>
                 </div>
             </div>
             
             <div class="input-group">
-                <input type="text" id="email" required>
-                <label for="email">Email</label>
+                <input type="email" id="email" required>
+                <label for="email">Your Email</label>
             </div>
             <div class="input-group">
                 <textarea id="message" rows="8" required></textarea>
@@ -43,13 +44,11 @@
 
     </div>
 
+    {% comment %} CAN WE REMOVE THIS CDN SOMEHOW {% endcomment %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js "></script> 
+    <script src="{% static 'core/js/forms.js' %} "></script>
+
 </body>
 
-<script>
-    document.getElementById("my-form").addEventListener("submit", function(event) {
-        event.preventDefault();
-        document.getElementById("my-form").reset();
-        window.location.href = "{% url 'index' %}?form_submitted=true";
-    });
-</script>
+
 {% endblock %}
