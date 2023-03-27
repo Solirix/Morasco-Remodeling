@@ -1,6 +1,4 @@
 window.addEventListener('scroll', function() {
-    //source is located in base.html on line 39 below </head> stuff
-
     var element = document.querySelector('.daddy-perry');
     var position = element.getBoundingClientRect().top;
     var windowHeight = window.innerHeight;
