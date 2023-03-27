@@ -24,7 +24,9 @@
     height: 400px;
     width: 500px;
     border-radius: 10px;
-    opacity: 0.9;
+    /* opacity: 0.9; */
+    opacity: 0.2; /* Set the initial opacity to 0 */
+    transition: opacity 2s ease; /* Add a transition effect */ 
 }
 
 .portfolio_text_blocks {
@@ -75,8 +77,8 @@
     }
 
     .port_container {
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
     }
 
     .port_photos {
@@ -118,8 +120,8 @@
     }
 
     .port_container {
-        padding-left: .1rem;
-        padding-right: .1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .port_photos {
