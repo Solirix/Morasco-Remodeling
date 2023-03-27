@@ -67,6 +67,8 @@
 }
 
 #ask_us_today {
+    text-decoration: none;
+    color: inherit;
     background-color: #FBBF24;
     font-size: 1.125rem;  
     font-weight: 600;
@@ -79,6 +81,7 @@
 .ask_us_today:hover {
     color: #6B7280;
 }
+
 
 @media screen and (max-width: 850px) {
     .service_container {

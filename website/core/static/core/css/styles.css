@@ -53,6 +53,8 @@ nav {
     line-height: 1.75rem;
     font-weight: 600;
     padding-right: 1.5rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 .buttons:hover {
@@ -66,6 +68,8 @@ nav {
     padding: 12px;
     border-radius: 12px;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    text-decoration: none;
+    color: inherit;
 }
 
 .contact_us_button:hover {
@@ -429,6 +433,7 @@ position: relative;
 }
 
 .menu {
+    list-style: none;
     position: relative;
     display: flex;
     justify-content: center;
@@ -438,6 +443,7 @@ position: relative;
   }
 
 .menu__link {
+    text-decoration: none;
     font-size: 1.2rem;
     margin: 0 10px;
     display: inline-block;
