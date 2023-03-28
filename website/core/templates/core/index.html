@@ -102,7 +102,18 @@ it uses tho. The class is called "carousel-indicators"-->
       background-color: #1F2937;
     }
 
-
+    .daddy-perry img {
+      max-width: 45% !important;
+      height: auto !important;
+      {% comment %} width: 50% !important; /* Adjust this value to make the image smaller or larger */
+      transform: scale(0.5) !important; /* Adjust this value to make the image smaller or larger */ {% endcomment %}
+    }
+    .slanted-text-container p {
+      font-size: 1.5rem; /* increase the font size to make the text larger */
+      color: gray; /* set color to black Change color here*/ 
+    }
+    
+    
         
   </style>
 </head>
@@ -221,21 +232,19 @@ it uses tho. The class is called "carousel-indicators"-->
 
 <div class="slanted-container">
 <div class="slanted-shape">
-  <h2 class="slanted-title text-3xl font-bold text-gray-800">Why Choose Morasco Remodeling</h2>
+  <h3 class="slanted-title" id = "why">Why Choose Morasco Remodeling</h3>
   
   <div class="daddy-perry" >
-    <img id="daddy" src="{% static 'core/images/Squared/edp.jpg' %} " >
+    <img id="daddy" src="{% static 'core/images/Squared/about-us-pic(1).jpg' %} " >
   </div>
 
   <div class="slanted-text-container">
-    <h2 class="text-1xl font-semibold text-gray-800"></br></br></br></br></br>Lorem ipsum dolor sit amet, 
-      consectetur adipiscing elit. Nullam vel feugiat mi. Nam vel dapibus justo, et laoreet lectus. Vestibulum
-      eget luctus ipsum. Sed euismod semper commodo. Aliquam tempus ex vel turpis elementum, eget sagittis ipsum blandit.
-      Donec vitae tortor vel mi fringilla bibendum. Integer consequat libero vel enim lobortis
-      faucibus. </br></br></h2>
+    <p class="text-1xl font-semibold text-gray-800" style="padding-top: 60px;"></br></br> I have been in the professional Raw-Dogging Industry for a
+      little over 10 years now. I have been in the professional Raw-Dogging Industry for my son who has terminal swagger stage 4. Little man dougies everyday
+      like the true fighter he is. Lorem Ipsum till the day I die. fabulous. </br></p>
     <div class="flex justify-center items-center h-full mt-5">
       <div class="text-center">
-        <a href="/contact/" class="contact_us_button" style="margin-left: -200px;">Gimmie Dat</a>
+        <a href="/contact/" class="contact_us_button" style="margin-left: -95px;">Gimmie Dat</a>
       </div>
     </div>
   </div>
