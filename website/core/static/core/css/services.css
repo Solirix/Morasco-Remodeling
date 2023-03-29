@@ -60,7 +60,7 @@
     width: 400px;
     border-radius: 10px;
     /* opacity: 0.8; */
-    opacity: 0.2; /* Set the initial opacity to 0 */
+    opacity: 0; /* Set the initial opacity to 0 */
     transition: opacity 2s ease; /* Add a transition effect */ 
     margin-left: 30px;
     margin-right: 30px;
