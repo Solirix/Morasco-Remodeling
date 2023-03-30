@@ -13,5 +13,9 @@ class services_page_tests(TestCase):
         self.assertContains(response, 'class="didnt_see_container"')
         self.assertContains(response, 'id="didnt_see_text"')
         self.assertContains(response, 'id="ask_us_today"')
-        
+
+    def test_images_loading(self):
+        response = self.client.get('/services/')
+        self.assertContains(response, 'core/images/normal_sized/deck-with-seats.jpg')
+        self.assertContains(response, 'core/images/normal_sized/wood-wall-basement.jpg')
 
