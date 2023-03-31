@@ -15,7 +15,7 @@
 
 form{
     width: 90%;
-    max-width: 2000px;
+    max-width: 1000px;
 }
 .input-group{
     margin-bottom: 30px;
@@ -43,16 +43,23 @@ label{
     transition: 0.2s;
 }
 
-button{
-    padding: 10px 0;
-    color: #000000;
-    outline: none;
-    background: transparent;
-    border: 1px solid #000000;
-    width: 100%;
-    cursor: pointer;
-    align-items: center;
-    justify-content: center;
+.hero .button{
+    margin-top: 30px;
+    margin-left: 415px;
+}
+
+.hero .button button{
+    background-color: #3d3d3d;
+    padding: 12px 40px;
+    text-decoration: none;
+    color: #fff;
+    font-size: 25px;
+    letter-spacing: 1.5px;
+}
+
+.hero .button button:hover{
+    background-color: #fbbf24;
+    color:#fff;
 }
 
 input:focus~label,
