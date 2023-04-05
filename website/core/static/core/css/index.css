@@ -44,7 +44,7 @@ position: relative;
   width: 45%;
   transform: skewY(3deg);
   opacity: 0; /* Set the initial opacity to 0 */
-  transition: opacity 4s ease; /* Add a transition effect */ 
+  transition: opacity 5s ease; /* Add a transition effect */ 
 }
 
 .slanted-title {
@@ -71,4 +71,4 @@ position: relative;
   padding-bottom: 250px;
 }
 
-/* START OF ADDING CSS FROM HTML PAGE IN SAME ORDER IT WAS THERE */
+/*  */

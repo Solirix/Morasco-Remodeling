@@ -207,6 +207,8 @@
 </head>
 
 <script src="{% static 'core/js/indexanimations.js' %} "></script>
+<script src="{% static 'core/js/indexbottomanimation.js' %} "></script>
+
 
 
 <!--body class="bg-gradient-to-b from-orange-100 to-blue-200"-->
@@ -355,9 +357,9 @@
 
 
     <h1 class="cool-mes">What are you waiting for?</h1>
-    <h1 class="cooler-mes">LETS GET THAT REMODELED</h1>
+    <h1 class="cooler-mes"> LETS GET THAT <span id="rotating-word">REMODELED</span></h1>
     {% comment %} putt or go inside here to make the variable rotate through remodel fix install whatever {% endcomment %}
-    <div clas="button-div">
+    <div class="button-div">
       <a href="/contact/" class="contact_us_button" >Lets Go</a>
     </div>
 
