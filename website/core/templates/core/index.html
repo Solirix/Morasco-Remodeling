@@ -202,6 +202,12 @@
       right: 35px;
       width: 180px;
     }
+    {% comment %}  {% endcomment %}
+    .rotating-word {
+      display: inline-block;
+      width: 400px;
+    }
+    
         
   </style>
 </head>
@@ -350,14 +356,13 @@
 <div class="wrapper">
   <div class="square">
     <img src="{% static 'core/images/random/output-onlinepngtools.png' %}" class = "ladder">
-    <img src="{% static 'core/images/random/paint(1).png' %}" class = "paint">
     <img src="{% static 'core/images/random/result.png' %}" class = "tools">
     <img src="{% static 'core/images/random/result(1).png' %}" class = "saw">
 
 
 
     <h1 class="cool-mes">What are you waiting for?</h1>
-    <h1 class="cooler-mes"> LETS GET THAT <span id="rotating-word">REMODELED</span></h1>
+    <h1 class="cooler-mes"> LETS GET THAT -&gt  <span id="rotating-word">REMODELED</span></h1>
     {% comment %} putt or go inside here to make the variable rotate through remodel fix install whatever {% endcomment %}
     <div class="button-div">
       <a href="/contact/" class="contact_us_button" >Lets Go</a>
