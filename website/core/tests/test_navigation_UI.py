@@ -2,7 +2,8 @@
 
 import time
 from django.test import LiveServerTestCase # needed for testing the UI
-from selenium import webdriver 
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait 
 from webdriver_manager.chrome import ChromeDriverManager # this line and the next can be changed to use other browsers
 from selenium.webdriver.chrome.service import Service as ChromeService
 from selenium.webdriver.common.keys import Keys
