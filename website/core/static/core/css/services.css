@@ -95,6 +95,13 @@
     color: #6B7280;
 }
 
+@media screen and (min-width: 1081px) {
+    .services_page_container {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+
 @media screen and (max-width: 850px) {
     /* .service_container {
         margin-bottom: 50px;
