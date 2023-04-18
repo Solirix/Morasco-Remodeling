@@ -40,7 +40,7 @@
 .service_heading {
     margin-top: 10px;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 10px;
     text-align: center;
 }
@@ -54,6 +54,13 @@
     margin-left: 0px;
     margin-right: 0px;
 }
+.services_list {
+    list-style-type: none;
+    text-align: center;
+    font-size: 1.1rem;
+    padding-left: 0px;
+}
+
 
 .services_images {
     height: 300px;
@@ -120,6 +127,9 @@
         padding-right: 0px;
         margin-left: 50px;
         margin-right: 50px;
+    }
+    .services_list {
+        font-size: 0.8rem;
     }
 
     .services_images {
