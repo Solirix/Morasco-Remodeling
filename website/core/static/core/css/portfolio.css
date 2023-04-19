@@ -71,12 +71,12 @@
     border-right: 150px solid transparent;
 }
 
-@media screen and (min-width: 1081px) {
+@media screen and (min-width: 1440px) and (min-height: 900px) {
     .port_container {
         padding-right: 5rem;
         padding-left: 5rem;
     }
-}
+} 
 
 @media screen and (max-width: 850px) {
     #port_heading {
