@@ -102,6 +102,13 @@
     }
 }
 
+@media screen and (min-width: 1100px) {
+    .services_row_container {
+        padding-right: 5rem;
+        padding-left: 5rem;
+    }
+}
+
 @media screen and (max-width: 850px) {
     .service_container {
         width: 200px;
