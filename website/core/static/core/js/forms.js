@@ -1,3 +1,4 @@
+//init firebase
 const firebaseConfig = {
 
     apiKey: "AIzaSyCyr_FLgMWP-EtOamoM8wWWV76udhCTCBk",
@@ -15,10 +16,10 @@ const firebaseConfig = {
     appId: "1:858151144597:web:ed74faf70f0b1387159f9c"
 
   };
-//init firebase
 firebase.initializeApp(firebaseConfig);
+//init firebase
 
-//reference the database. Given name contactForm
+//Database Variable, Given name 'contactForm'
 var contactFormDB = firebase.database().ref('contactForm')
 
 //For alert fade
@@ -41,7 +42,7 @@ function submitForm(e){
     alert.classList.add('show');
     //alert the user what happened
 
-    //remove alert after 3 seconds
+    //remove alert after 8 seconds
     setTimeout(() => {
         alert.classList.remove('show');
     }, 8000);
