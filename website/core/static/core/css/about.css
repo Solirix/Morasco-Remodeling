@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
 }
-
+  
 .section{
     width: 100%;
     min-height: 100vh;
@@ -78,6 +78,9 @@
         width: 100%;
         display: block;
         margin: auto;
+    }
+    h2 {
+        font-family: 'Mrs Saint Delafield', cursive !important;
     }
     .image-section{
         float: none;
