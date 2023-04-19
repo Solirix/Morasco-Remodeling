@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html> 
 <!-- this file will be used as a template for every html page-->
 <html>
@@ -22,9 +24,10 @@
     <script src="https://unpkg.com/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
     <!-- required code for carousel -->
 
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
 
     <title>{% block title %}{% endblock %} | Morasco Remodeling</title> <!-- title on tab -->
+    {% load static %}
+    <link rel="shortcut icon" type="image/x-icon" href="{% static 'favicon.ico' %}">
 
     <!-- required code for favicon Below -->
 
