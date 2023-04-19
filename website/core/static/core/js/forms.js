@@ -57,7 +57,7 @@ const getElementVal = (id) => {
 }
 
 const saveMessage = (name, email, phone, message) => {
-    var newContactForm = contactFormDB.push();
+    var newContactForm = contactFormDB.push(); // pushes to database
     newContactForm.set({
         name: name,
         email: email,
