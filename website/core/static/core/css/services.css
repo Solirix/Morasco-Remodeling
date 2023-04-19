@@ -1,4 +1,5 @@
 
+/*container for each row */
 .services_row_container {
     /* position: relative; */
     display: flex;
@@ -14,13 +15,14 @@
 
 .service_container{
     margin-bottom: 150px;
-    /* border: 3px solid #6B7280; */
+    /* border: 2px solid #6B7280;  */
     border-radius: 10px;
     height: 300px;
     width: 325px;
     opacity: 0.8;
 } 
 
+/*service type heading*/
 .service_heading {
     margin-top: 10px;
     font-weight: bold;
@@ -30,6 +32,7 @@
     text-align: center;
 }
 
+/*service type text*/
 .service_text {
     width: 400px;
     padding-left: 25px;
@@ -40,6 +43,7 @@
     margin-right: 0px;
 }
 
+/*service type text*/
 .services_list {
     list-style-type: none;
     text-align: center;
@@ -47,6 +51,7 @@
     padding-left: 0px;
 }
 
+/*images on page*/
 .services_images {
     margin-top: -150px;
     height: 300px;
@@ -56,6 +61,7 @@
     transition: opacity 2s ease; /* Add a transition effect */ 
 }
 
+/*heading at top of page*/
 #services_page_header {
     font-size: 4.0rem;
     font-weight: bold;
@@ -65,18 +71,21 @@
     display: flex;
 }
 
+/*container for didnt see heading and button*/
 .didnt_see_container {
     display: flex;
     justify-content: center;
     padding-bottom: 30px;
 }
 
+/*style the didnt see text*/
 #didnt_see_text {
     padding-top: 0px;
     font-size: 2rem;
     font-weight: bold;
 }
 
+/*style the ask us today button*/
 #ask_us_today {
     text-decoration: none;
     color: inherit;
@@ -89,6 +98,7 @@
     margin-bottom: 100px;
 }
 
+/*hover effect for button*/
 #ask_us_today:hover {
     color: #6B7280;
 }
@@ -140,6 +150,7 @@
     }
 }
 
+/*mobile phone look*/
 @media screen and (max-width: 480px) {
     .service_container {
         margin-bottom: 50px;
@@ -164,11 +175,6 @@
         padding-left: 1rem;
         padding-right: 1rem;
     }
-
-    /* .container {
-        position: relative;
-        flex-direction: column;
-    } */
 
     #services_page_header {
         font-size: 1.70rem;
