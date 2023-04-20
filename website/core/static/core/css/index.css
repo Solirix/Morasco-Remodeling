@@ -269,6 +269,21 @@ position: relative;
 }
 
 @media (max-width: 500px) {
+  /* Carousel */
+  .carousel-caption h4,
+  .carousel-caption h5,
+  .carousel-caption a {
+    display: none;
+  }
+  
+
+  .carousel-caption p {
+    font-size: 1.0rem;
+    margin-top: 35px;
+    margin-left: -200px;
+  }
+
+  /* About */
   .slanted-text-container p {
     font-size: 1.0rem;
     margin-right: -100px;
@@ -289,6 +304,13 @@ position: relative;
   }
   .contact_us_button {
     font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  /* Bottom */
+  .square img {
+    display: none;
+  }
+  .cooler-mes {
+    font-size: 3.0rem;
   }
 
 }
