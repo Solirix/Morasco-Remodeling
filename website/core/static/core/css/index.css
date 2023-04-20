@@ -267,8 +267,143 @@ position: relative;
   display: inline-block;
   width: 400px;
 }
+@media (max-width: 1200px) {
+  /* Carousel */
+  .carousel-caption h4,
+  .carousel-caption h5,
+  .carousel-caption a {
+    display: none;
+  }
+  
 
-@media (max-width: 500px) {
+  .carousel-caption p {
+    font-size: 3.0rem;
+    margin-top: 120px;
+    margin-left: -300px;
+  }
+
+  /* About */
+  .slanted-text-container p {
+    font-size: 1.0rem;
+    margin-right: -100px;
+  }
+  .daddy-perry img {
+    transform: scale(1.4);
+    margin-top: 150px;
+    margin-left: -230px;
+    margin-right: -50px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  #why {
+    white-space: nowrap;
+    font-size: 1.75rem; /* set smaller font size */
+    margin-left: 10px;
+    margin-top: -0px;
+  }
+  .contact_us_button {
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  /* Bottom */
+  .square img {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 1000px) {
+  /* Carousel */
+  .carousel-caption h4,
+  .carousel-caption h5,
+  .carousel-caption a {
+    display: none;
+  }
+  
+
+  .carousel-caption p {
+    font-size: 2.0rem;
+    margin-top: 110px;
+    margin-left: -200px;
+  }
+
+  /* About */
+  .slanted-text-container p {
+    font-size: 1.0rem;
+    margin-right: -100px;
+  }
+  .daddy-perry img {
+    transform: scale(1.4);
+    margin-top: 150px;
+    margin-left: -230px;
+    margin-right: -50px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  #why {
+    white-space: nowrap;
+    font-size: 1.75rem; /* set smaller font size */
+    margin-left: 10px;
+    margin-top: -0px;
+  }
+  .contact_us_button {
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  /* Bottom */
+  .square img {
+    display: none;
+  }
+
+
+}
+
+@media (max-width: 700px) {
+  /* Carousel */
+  .carousel-caption h4,
+  .carousel-caption h5,
+  .carousel-caption a {
+    display: none;
+  }
+  
+
+  .carousel-caption p {
+    font-size: 1.5rem;
+    margin-top: 55px;
+    margin-left: -200px;
+  }
+
+  /* About */
+  .slanted-text-container p {
+    font-size: 1.0rem;
+    margin-right: -100px;
+  }
+  .daddy-perry img {
+    transform: scale(1.4);
+    margin-top: 150px;
+    margin-left: -230px;
+    margin-right: -50px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  #why {
+    white-space: nowrap;
+    font-size: 1.75rem; /* set smaller font size */
+    margin-left: 10px;
+    margin-top: -0px;
+  }
+  .contact_us_button {
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  /* Bottom */
+  .square img {
+    display: none;
+  }
+  .cooler-mes {
+    font-size: 3.0rem;
+  }
+
+}
+@media (max-width: 600px) {
   /* Carousel */
   .carousel-caption h4,
   .carousel-caption h5,
@@ -314,3 +449,4 @@ position: relative;
   }
 
 }
+
