@@ -442,13 +442,21 @@ position: relative;
     margin-top: -0px;
   }
   .contact_us_button {
-    font-size: 1.5rem; /* Adjust the font size to your liking */
+    font-size: 0.75rem; /* Adjust the font size to your liking */
+  }
+  .slanted-text-container a{
+    font-size: 2rem; /* Adjust the font size to your liking */
   }
   /* Bottom */
   .square img {
     display: none;
   }
-
+  .button-div a{
+    font-size: 2rem; /* Adjust the font size to your liking */
+  }
+  .text-center a{
+    font-size: 2rem; /* Adjust the font size to your liking */
+  }
 
 }
 
@@ -487,7 +495,10 @@ position: relative;
     margin-top: -0px;
   }
   .contact_us_button {
-    font-size: 1.5rem; /* Adjust the font size to your liking */
+    font-size: 0.75rem; /* Adjust the font size to your liking */
+  }
+  .slanted-text-container a{
+    font-size: 2rem; /* Adjust the font size to your liking */
   }
   /* Bottom */
   .square img {
@@ -496,8 +507,17 @@ position: relative;
   .cooler-mes {
     font-size: 3.0rem;
   }
+  .button-div a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  .text-center a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
 
 }
+
+
+
 @media (max-width: 600px) {
   /* Carousel */
   .carousel-caption h4,
@@ -533,6 +553,9 @@ position: relative;
     margin-top: -0px;
   }
   .contact_us_button {
+    font-size: 0.5rem; 
+  }
+  .slanted-text-container a{
     font-size: 1.5rem; /* Adjust the font size to your liking */
   }
   /* Bottom */
@@ -541,6 +564,70 @@ position: relative;
   }
   .cooler-mes {
     font-size: 3.0rem;
+  }
+  .button-div a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  .text-center a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+
+}
+
+
+
+@media (max-width: 500px) {
+  /* Carousel */
+  .carousel-caption h4,
+  .carousel-caption h5,
+  .carousel-caption a {
+    display: none;
+  }
+  
+
+  .carousel-caption p {
+    font-size: 1.0rem;
+    margin-top: 35px;
+    margin-left: -170px;
+  }
+
+  /* About */
+  .slanted-text-container p {
+    font-size: 0.75rem;
+    margin-right: -70px;
+  }
+  .daddy-perry img {
+    transform: scale(1.4);
+    margin-top: 150px;
+    margin-left: -230px;
+    margin-right: -50px;
+    margin-bottom: 10px;
+    max-width: 100%;
+  }
+  #why {
+    white-space: nowrap;
+    font-size: 1.25rem; /* set smaller font size */
+    margin-left: 10px;
+    margin-top: -0px;
+  }
+  .contact_us_button {
+    font-size: 0.4rem; 
+  }
+  .slanted-text-container a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  /* Bottom */
+  .square img {
+    display: none;
+  }
+  .cooler-mes {
+    font-size: 2.5rem;
+  }
+  .button-div a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
+  }
+  .text-center a{
+    font-size: 1.5rem; /* Adjust the font size to your liking */
   }
 
 }
