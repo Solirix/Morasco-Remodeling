@@ -1,6 +1,6 @@
 
 .services_row_container {
-    position: relative;
+    /* position: relative; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -11,8 +11,9 @@
     padding-left: 8rem; */
 }
 
-.service_container {
+.service_container_right {
     margin-bottom: 150px;
+    margin-left: 50px;
     /* border: 3px solid #6B7280; */
     border-radius: 10px;
     height: 300px;
