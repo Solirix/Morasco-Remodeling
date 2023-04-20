@@ -9,10 +9,12 @@
 
 {% block content %}
 
+{% comment %} JavaScript animations {% endcomment %}
 <script src="{% static 'core/js/indexanimations.js' %} "></script>
 <script src="{% static 'core/js/indexbottomanimation.js' %} "></script>
+{% comment %} JavaScript animations {% endcomment %}
 
-
+{% comment %} Carousel {% endcomment %}
 <div id="carouselExampleIndicators" class="carousel slide " data-bs-ride="carousel" data-bs-interval="5000">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -28,7 +30,7 @@
 
       <div class="carousel-caption">
         <p>Morasco Remodeling</p>
-        <h5>Quality | Experience | Affordable | Timely | Personalized</h5> {% comment %} perhaps remove for those 3 images w maybe words under{% endcomment %}
+        <h5>Quality | Experience | Affordable | Personalized</h5> 
         <br>
         <h4> With over 10 years of experience, we have the skills to help with almost all your remodeling and repairing needs.</h4>
         <a href="/contact/" class="contact_us_button" >Lets Get Started!</a>
@@ -64,61 +66,50 @@
     <span class="visually-hidden">Next</span>
   </button>
 </div>
+{% comment %} Carousel {% endcomment %}
 
 <br>
-
+{% comment %} Icon Banner Section {% endcomment %}
 <div class="container-under">
   <h2>We're Here For <u>You</u></h2>
   <p>Affordable, Professional Work, On Just About Everything</p>
 </div>
 
 <div class="banner-container">
+
   <div class="banner-item">
-    
       <img src="{% static 'core/images/Squared/PXL_20210908_193124241(1).jpg'%}">
       <div class="banner-text">BATHROOMS</div>
-    
   </div>
-
   <div class="banner-item">
-    
       <img src="{% static 'core/images/Squared/IMG_20180509_162146(1).jpg'%}">
       <div class="banner-text">DECKS</div>
-    
   </div>
-  
   <div class="banner-item">
-    
       <img src="{% static 'core/images/after/bradley-basement-after.jpg'%}">
       <div class="banner-text">BASEMENTS</div>
-    
   </div>
-
   <div class="banner-item">
-    
       <img src="{% static 'core/images/normal_sized/heated_floor.jpg'%}">
       <div class="banner-text">ELECTRICAL</div>
-    
   </div>
 
 </div>
 
-{% comment %} GIVE REAL STYLE {% endcomment %}
 <div style="display: flex; justify-content: center; align-items: center;">
   <h3 style="font-size: 2rem !important;">And More!</h3>
 </div>
 
-{% comment %} button {% endcomment %}
 <div class="flex justify-center items-center h-full mt-5">
-
   <div class="text-center">
     <a href="/services/" class="contact_us_button">See all the ways we can help!</a>
   </div>
 
 </div>
+{% comment %} Icon Banner Section {% endcomment %}
 
-{% comment %} button {% endcomment %}
 
+{% comment %} Why Choose Slanted Shape Section {% endcomment %}
 <div class="slanted-container">
 <div class="slanted-shape">
   <h3 class="slanted-title" id = "why">Why Choose Morasco Remodeling</h3>
@@ -139,24 +130,25 @@
 
 </div>
 </div>
+{% comment %} Why Choose Slanted Shape Section {% endcomment %}
 
+{% comment %} Bottom Section Last Chance{% endcomment %}
 <div class="wrapper">
   <div class="square">
     <img src="{% static 'core/images/random/output-onlinepngtools.png' %}" class = "ladder">
     <img src="{% static 'core/images/random/result.png' %}" class = "tools">
     <img src="{% static 'core/images/random/result(1).png' %}" class = "saw">
 
-
-
     <h1 class="cool-mes">What are you waiting for?</h1>
     <h1 class="cooler-mes"> LETS GET THAT -&gt  <span id="rotating-word">REMODELED</span></h1>
-    {% comment %} putt or go inside here to make the variable rotate through remodel fix install whatever {% endcomment %}
+    {% comment %} puts or go inside here to make the variable rotate through remodel fix install etc {% endcomment %}
     <div class="button-div">
       <a href="/contact/" class="contact_us_button" >Lets Do It</a>
     </div>
 
   </div>
 </div>
+{% comment %} Bottom Section Last Chance{% endcomment %}
 
 
 {% endblock %}
