@@ -1,3 +1,4 @@
+//Two paths, two tests
 document.addEventListener("DOMContentLoaded", function() {
     var words = ["BUILT", "DESIGNED", "DEVELOPED", "CREATED", "ENGINEERED", "MADE", "CONSTRUCTED", "CONCOCTED", "CONSTRUCTED"];
     //'words' is a set of words that will be iterated through the animation

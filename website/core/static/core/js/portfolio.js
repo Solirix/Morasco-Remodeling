@@ -1,3 +1,4 @@
+//?How many Paths?
 addEventListener('load', function() {
         //On load the animation will start on .port_photos class
         var elements = document.querySelectorAll('.port_photos');

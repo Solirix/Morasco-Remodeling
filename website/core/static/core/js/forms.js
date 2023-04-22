@@ -1,3 +1,4 @@
+//One path, one test
 //init firebase
 const firebaseConfig = {
 
