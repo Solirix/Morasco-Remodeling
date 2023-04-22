@@ -25,8 +25,8 @@ urlpatterns = [
     path('', index, name='index'), # add the index function to the urlpatterns list
     path('portfolio/', portfolio, name='portfolio'), # add the portfolio function to the urlpatterns list
     path('contact/', contact, name='contact'), # add the contact function to the urlpatterns list
-    path('about/', about, name='about'), # add the contact function to the urlpatterns list
-    path('services/', services, name='services'), # add the contact function to the urlpatterns list
+    path('about/', about, name='about'), # add the about us function to the urlpatterns list
+    path('services/', services, name='services'), # add the services function to the urlpatterns list
 
     path('admin/', admin.site.urls),
     # path('services/', services, name='services'),
