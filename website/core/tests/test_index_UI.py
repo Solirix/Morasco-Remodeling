@@ -143,3 +143,34 @@ class MyUITestCase(TestCase):
     
     def tearDown(self):
         self.driver.quit()
+class MyUITestCase(TestCase):
+    driver = webdriver.Firefox()
+
+    # Load the web page that contains the code
+    driver.get("https://yourwebsite.com")
+
+    # Wait for the animation to start
+    element = WebDriverWait(driver, 10).until(
+        EC.text_to_be_present_in_element_value(
+            (By.ID, "rotating-word"), "CONSTRUCTED"
+        )
+    )
+
+    # Verify that the animation is rotating through the correct words
+    expected_words = ["BUILT", "DESIGNED", "DEVELOPED", "CREATED", "ENGINEERED", "MADE", "CONSTRUCTED", "CONCOCTED", "CONSTRUCTED"]
+    index = 0
+    while True:
+        current_word = element.text
+        assert current_word == expected_words[index]
+        index = (index + 1) % len(expected_words)
+        if index == 0:
+            break
+        # Wait for 3.5 seconds before checking the next word
+        WebDriverWait(driver, 3.5).until(
+            EC.text_to_be_present_in_element_value(
+                (By.ID, "rotating-word"), expected_words[index]
+            )
+        )
+
+    # Close the browser window
+    driver.quit()
