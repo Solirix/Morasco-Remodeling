@@ -1,4 +1,4 @@
-import time
+import time, requests
 from django.test import LiveServerTestCase # needed for testing the UI
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
