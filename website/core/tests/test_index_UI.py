@@ -130,3 +130,16 @@ class TestUI(LiveServerTestCase):
             
     def tearDown(self):
         self.driver.quit()
+class MyUITestCase(TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(10)
+    
+    def test_contact_us_button(self):
+        self.driver.get('http://localhost:8000')
+        contact_button = self.driver.find_element_by_class_name('contact_us_button')
+        contact_button.click()
+        self.assertIn('Contact Us', self.driver.title)
+    
+    def tearDown(self):
+        self.driver.quit()
