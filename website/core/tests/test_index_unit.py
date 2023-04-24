@@ -12,6 +12,10 @@ class index_page_tests(TestCase):
         response = self.client.get('/')
         self.assertContains(response, 'class="slanted-text-container"')
 
+    def test_about_us_class(self):
+        response = self.client.get('/')
+        self.assertContains(response, 'class="daddy-perry"')
+
     def test_services_banner_css_classes(self):
         response = self.client.get('/')
         self.assertContains(response, 'class="banner-container"')

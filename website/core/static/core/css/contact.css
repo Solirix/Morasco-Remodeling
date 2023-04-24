@@ -22,6 +22,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 1cm;
 }
 
 form{
@@ -45,6 +46,7 @@ input, textarea{
     outline: 0;
     border: 1px solid #000000;
     border-radius: 1cm;
+    border-top-right-radius: 1cm;
     color: #000000;
     background: transparent;
     font-size: 15px;
@@ -92,6 +94,7 @@ textarea:focus~label
     display: flex;
     align-items: center;
     justify-content: space-between;
+    border-radius: 1cm;
 }
 .row .input-group{
     flex-basis: 48%;
@@ -104,6 +107,7 @@ textarea:focus~label
     justify-content: center;
     text-align: center;
     font-size: 4rem;
+    border-radius: 1cm;
 }
 .alert{
     width: 100%;
