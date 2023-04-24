@@ -83,10 +83,9 @@ label{
 }
 
 input:focus~label,
-input:valid~label,
-textarea:focus~label,
-textarea:valid~label{
-    color:#fbbf24;
+textarea:focus~label
+{
+    color: #fbbf24;
 }
 
 .row{
