@@ -1,7 +1,63 @@
+
+import time
 from django.test import TestCase
 from selenium import webdriver
 import requests
+from selenium.webdriver.chrome.webdriver import WebDriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
+# TOMMYS SEC
+class ButtonTest(TestCase):
+    def setUp(self):
+        self.selenium = WebDriver()
+        self.selenium.implicitly_wait(10)
+
+    def tearDown(self):
+        self.selenium.quit()
+
+    def test_button(self):
+        self.selenium.get(self.live_server_url)
+        button = self.selenium.find_element_by_class_name('contact_us_button')
+        button.click()
+        wait = WebDriverWait(self.selenium, 10)
+        element = wait.until(EC.presence_of_element_located((By.ID, 'contact-form')))
+        self.assertEqual(self.selenium.current_url, self.live_server_url + '/contact/')
+
+def test_rotating_word_animation(TestCase):
+    # create a webdriver instance
+    driver = webdriver.Chrome()
+
+    # navigate to the page with the rotating word animation
+    driver.get("http://localhost:8000")
+
+    # wait for the page to load
+    wait = WebDriverWait(driver, 10)
+    wait.until(EC.presence_of_element_located((By.ID, "rotating-word")))
+
+    # get the rotating word element
+    rotating_word = driver.find_element(By.ID, "rotating-word")
+
+    # get the initial word
+    initial_word = rotating_word.text
+
+    # wait for the animation to complete (3.5 seconds)
+    time.sleep(3.5)
+
+    # get the updated word
+    updated_word = rotating_word.text
+
+    # assert that the updated word is not the same as the initial word
+    assert initial_word != updated_word
+
+    # quit the webdriver instance
+    driver.quit()
+# TOMMYS SEC
+
+
+
+# ROMANS SEC
 class index_page_tests(TestCase):
     
     def test_images_loading(self):
@@ -35,4 +91,4 @@ class index_page_tests(TestCase):
         self.assertContains(response, 'style="display: flex; justify-content: center; align-items: center;"')
         self.assertContains(response, 'style="font-size: 2rem !important;"')
         self.assertContains(response, 'class="flex justify-center items-center h-full mt-5"')
-        
+# ROMANS SEC
