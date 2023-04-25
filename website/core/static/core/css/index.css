@@ -287,7 +287,8 @@ position: relative;
 @media (max-width: 1700px) {
   /* Carousel */
   .carousel-caption h4,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
@@ -334,7 +335,8 @@ position: relative;
 @media (max-width: 1400px) {
   /* Carousel */
   .carousel-caption h4,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
@@ -382,7 +384,8 @@ position: relative;
   /* Carousel */
   .carousel-caption h4,
   .carousel-caption h5,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
@@ -427,7 +430,8 @@ position: relative;
   /* Carousel */
   .carousel-caption h4,
   .carousel-caption h5,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
@@ -480,7 +484,8 @@ position: relative;
   /* Carousel */
   .carousel-caption h4,
   .carousel-caption h5,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
@@ -538,7 +543,8 @@ position: relative;
   /* Carousel */
   .carousel-caption h4,
   .carousel-caption h5,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
@@ -596,7 +602,8 @@ position: relative;
   /* Carousel */
   .carousel-caption h4,
   .carousel-caption h5,
-  .carousel-caption a {
+  .carousel-caption a,
+  .carousel-caption i {
     display: none;
   }
   
