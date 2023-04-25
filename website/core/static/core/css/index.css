@@ -28,9 +28,12 @@ position: relative;
   margin-bottom: -20px;
 }
 .carousel-caption h4 {
+  text-shadow: 0px 2px 2px #000000;
   font-family: 'Gruppo', cursive !important;
+  color: white;
+  font-weight: bold;
   font-weight: 600;
-  font-size: 24px;
+  font-size: 27px;
 }
 
 .slanted-shape {
