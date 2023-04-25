@@ -180,7 +180,7 @@ class CarouselTest(LiveServerTestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome() # replace with the path to your webdriver
-        self.driver.get("http://yourwebsite.com") # replace with the URL of your website
+        self.driver.get("http://localhost:8000") # replace with the URL of your website
 
     def test_carousel_left_right(self):
         # Wait for carousel to load
