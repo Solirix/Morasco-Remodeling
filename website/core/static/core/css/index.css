@@ -16,9 +16,15 @@ position: relative;
   font-size: 3rem;
   text-shadow: 2px 2px 2px #000000;
 }
-
+.carousel-caption p{
+  font-family: 'Gruppo', cursive !important;
+  font-size: 3.25rem;
+  padding-bottom: 50px;
+}
 .carousel-caption h5 {
-  font-size: 24px;
+  font-family: 'Gruppo', cursive !important;
+  font-weight: 600;
+  font-size: 30px;
 }
 
 .slanted-shape {
@@ -266,6 +272,7 @@ position: relative;
   display: inline-block;
   width: 400px;
 }
+
 
 
 @media (max-width: 1700px) {
