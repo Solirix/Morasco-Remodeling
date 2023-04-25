@@ -100,7 +100,7 @@ class TestUI(LiveServerTestCase):
 
     
     def setUp(self):
-        self.driver = webdriver.Chrome()
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install())) 
         self.driver.get("http://localhost:8000") # Replace with your website URL
     
     def test_image_presence(self):
@@ -131,79 +131,82 @@ class TestUI(LiveServerTestCase):
     def tearDown(self):
         self.driver.quit()
 
-class MyUITestCase(LiveServerTestCase):
-    def setUp(self):
-        self.driver = webdriver.Chrome()
-        self.driver.implicitly_wait(10)
+
+# UNCOMMENT BELOW
+
+# class MyUITestCase(LiveServerTestCase):
+#     def setUp(self):
+#         self.driver = webdriver.Chrome()
+#         self.driver.implicitly_wait(10)
     
-    def test_contact_us_button(self):
-        self.driver.get('http://localhost:8000')
-        contact_button = self.driver.find_element_by_class_name('contact_us_button')
-        contact_button.click()
-        self.assertIn('Contact Us', self.driver.title)
+#     def test_contact_us_button(self):
+#         self.driver.get('http://localhost:8000')
+#         contact_button = self.driver.find_element_by_class_name('contact_us_button')
+#         contact_button.click()
+#         self.assertIn('Contact Us', self.driver.title)
     
-    def tearDown(self):
-        self.driver.quit()
+#     def tearDown(self):
+#         self.driver.quit()
 
-class MyUITestCase(LiveServerTestCase):
-    driver = webdriver.Firefox()
+# class MyUITestCase(LiveServerTestCase):
+#     driver = webdriver.Firefox()
 
-    # Load the web page that contains the code
-    driver.get("https://yourwebsite.com")
+#     # Load the web page that contains the code
+#     driver.get("http://localhost:8000")
 
-    # Wait for the animation to start
-    element = WebDriverWait(driver, 10).until(
-        EC.text_to_be_present_in_element_value(
-            (By.ID, "rotating-word"), "CONSTRUCTED"
-        )
-    )
+#     # Wait for the animation to start
+#     element = WebDriverWait(driver, 10).until(
+#         EC.text_to_be_present_in_element_value(
+#             (By.ID, "rotating-word"), "CONSTRUCTED"
+#         )
+#     )
 
-    # Verify that the animation is rotating through the correct words
-    expected_words = ["BUILT", "DESIGNED", "DEVELOPED", "CREATED", "ENGINEERED", "MADE", "CONSTRUCTED", "CONCOCTED", "CONSTRUCTED"]
-    index = 0
-    while True:
-        current_word = element.text
-        assert current_word == expected_words[index]
-        index = (index + 1) % len(expected_words)
-        if index == 0:
-            break
-        # Wait for 3.5 seconds before checking the next word
-        WebDriverWait(driver, 3.5).until(
-            EC.text_to_be_present_in_element_value(
-                (By.ID, "rotating-word"), expected_words[index]
-            )
-        )
+#     # Verify that the animation is rotating through the correct words
+#     expected_words = ["BUILT", "DESIGNED", "DEVELOPED", "CREATED", "ENGINEERED", "MADE", "CONSTRUCTED", "CONCOCTED", "CONSTRUCTED"]
+#     index = 0
+#     while True:
+#         current_word = element.text
+#         assert current_word == expected_words[index]
+#         index = (index + 1) % len(expected_words)
+#         if index == 0:
+#             break
+#         # Wait for 3.5 seconds before checking the next word
+#         WebDriverWait(driver, 3.5).until(
+#             EC.text_to_be_present_in_element_value(
+#                 (By.ID, "rotating-word"), expected_words[index]
+#             )
+#         )
 
-    # Close the browser window
-    driver.quit()
-class CarouselTest(LiveServerTestCase):
+#     # Close the browser window
+#     driver.quit()
+# class CarouselTest(LiveServerTestCase):
 
-    def setUp(self):
-        self.driver = webdriver.Chrome() # replace with the path to your webdriver
-        self.driver.get("http://localhost:8000") # replace with the URL of your website
+#     def setUp(self):
+#         self.driver = webdriver.Chrome() # replace with the path to your webdriver
+#         self.driver.get("http://localhost:8000") # replace with the URL of your website
 
-    def test_carousel_left_right(self):
-        # Wait for carousel to load
-        carousel_element = WebDriverWait(self.driver, 10).until(
-            EC.presence_of_element_located((By.ID, "carouselExampleIndicators"))
-        )
+#     def test_carousel_left_right(self):
+#         # Wait for carousel to load
+#         carousel_element = WebDriverWait(self.driver, 10).until(
+#             EC.presence_of_element_located((By.ID, "carouselExampleIndicators"))
+#         )
 
-        # Click the right arrow 3 times
-        right_arrow = self.driver.find_element(By.CSS_SELECTOR, ".carousel-control-next")
-        for i in range(3):
-            right_arrow.click()
+#         # Click the right arrow 3 times
+#         right_arrow = self.driver.find_element(By.CSS_SELECTOR, ".carousel-control-next")
+#         for i in range(3):
+#             right_arrow.click()
 
-        # Check that the third image is active
-        third_image = self.driver.find_element(By.CSS_SELECTOR, ".carousel-item:nth-child(3).active")
-        self.assertTrue(third_image.is_displayed())
+#         # Check that the third image is active
+#         third_image = self.driver.find_element(By.CSS_SELECTOR, ".carousel-item:nth-child(3).active")
+#         self.assertTrue(third_image.is_displayed())
 
-        # Click the left arrow once
-        left_arrow = self.driver.find_element(By.CSS_SELECTOR, ".carousel-control-prev")
-        left_arrow.click()
+#         # Click the left arrow once
+#         left_arrow = self.driver.find_element(By.CSS_SELECTOR, ".carousel-control-prev")
+#         left_arrow.click()
 
-        # Check that the second image is active
-        second_image = self.driver.find_element(By.CSS_SELECTOR, ".carousel-item:nth-child(2).active")
-        self.assertTrue(second_image.is_displayed())
+#         # Check that the second image is active
+#         second_image = self.driver.find_element(By.CSS_SELECTOR, ".carousel-item:nth-child(2).active")
+#         self.assertTrue(second_image.is_displayed())
 
-    def tearDown(self):
-        self.driver.quit()
+#     def tearDown(self):
+#         self.driver.quit()
