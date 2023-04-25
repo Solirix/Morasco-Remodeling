@@ -130,7 +130,8 @@ class TestUI(LiveServerTestCase):
             
     def tearDown(self):
         self.driver.quit()
-class MyUITestCase(TestCase):
+
+class MyUITestCase(LiveServerTestCase):
     def setUp(self):
         self.driver = webdriver.Chrome()
         self.driver.implicitly_wait(10)
@@ -143,7 +144,8 @@ class MyUITestCase(TestCase):
     
     def tearDown(self):
         self.driver.quit()
-class MyUITestCase(TestCase):
+
+class MyUITestCase(LiveServerTestCase):
     driver = webdriver.Firefox()
 
     # Load the web page that contains the code
@@ -174,3 +176,34 @@ class MyUITestCase(TestCase):
 
     # Close the browser window
     driver.quit()
+class CarouselTest(LiveServerTestCase):
+
+    def setUp(self):
+        self.driver = webdriver.Chrome() # replace with the path to your webdriver
+        self.driver.get("http://yourwebsite.com") # replace with the URL of your website
+
+    def test_carousel_left_right(self):
+        # Wait for carousel to load
+        carousel_element = WebDriverWait(self.driver, 10).until(
+            EC.presence_of_element_located((By.ID, "carouselExampleIndicators"))
+        )
+
+        # Click the right arrow 3 times
+        right_arrow = self.driver.find_element(By.CSS_SELECTOR, ".carousel-control-next")
+        for i in range(3):
+            right_arrow.click()
+
+        # Check that the third image is active
+        third_image = self.driver.find_element(By.CSS_SELECTOR, ".carousel-item:nth-child(3).active")
+        self.assertTrue(third_image.is_displayed())
+
+        # Click the left arrow once
+        left_arrow = self.driver.find_element(By.CSS_SELECTOR, ".carousel-control-prev")
+        left_arrow.click()
+
+        # Check that the second image is active
+        second_image = self.driver.find_element(By.CSS_SELECTOR, ".carousel-item:nth-child(2).active")
+        self.assertTrue(second_image.is_displayed())
+
+    def tearDown(self):
+        self.driver.quit()
