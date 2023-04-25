@@ -50,7 +50,6 @@ position: relative;
   transform: skewY(3deg) translate(-50%, -50%);
   z-index: 1;
   margin-left: 10%; /* changed this line to mess with location left right where its located */
-
 }
 
 .slanted-text-container{
@@ -267,6 +266,7 @@ position: relative;
   display: inline-block;
   width: 400px;
 }
+
 
 @media (max-width: 1700px) {
   /* Carousel */
