@@ -1,3 +1,6 @@
+# this file clicks the "ask us today" button on the services page and makes sure that it works
+# this button is the only thing on the page that can be UI tested
+
 import time
 from django.test import LiveServerTestCase # needed for testing the UI
 from selenium import webdriver 

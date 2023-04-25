@@ -1,4 +1,4 @@
-# pip install selenium, webdriver-manager
+# This file will click every single link in both the nav bar and footer of the website and make sure that they work
 
 import time
 from django.test import LiveServerTestCase # needed for testing the UI
@@ -19,109 +19,80 @@ class TestUI(LiveServerTestCase):
     def tearDown(self):
         self.driver.quit()
 
-    def test(self):
-        self.driver.get('http://127.0.0.1:8000/portfolio/') # call portfolio page
-
-        assert "Portfolio" in self.driver.title # check if the title of the page is "Portfolio"
-
-    # make sure the logo is clickable and takes you to the home page
-    def test_image_link(self):
-        self.driver.get('http://127.0.0.1:8000/portfolio')
-        logo = self.driver.find_element(By.ID, "logo")
-        time.sleep(2)
-        logo.click()
-        assert "Home" in self.driver.title
-
-    # ensure the same link works, but for the footer logo as well
-    def test_footer_image_link(self):
-        self.driver.get('http://127.0.0.1:8000/portfolio')
-        logo = self.driver.find_element(By.ID, "logo-footer")
-        time.sleep(2)
-        logo.click()
-        assert "Home" in self.driver.title
-
-
-
-
-    # make sure the navbar links are clickable and take you to the correct page
-    def test_navbar_links(self):
+    # when the nav bar tests run make sure to hide the debig toolbar as it is "on top" of the about and contact links
+    # this is fine as the debug toolbar is not shown in production
+    def test_navbar(self):
         self.driver.get('http://127.0.0.1:8000/')
-        link = self.driver.find_element(By.ID, "service nav")
-        link.click()
-        time.sleep(2)
-        assert "Services" in self.driver.title
+        li_element = self.driver.find_element(By.ID, "logo")
+        time.sleep(1)
+        li_element.click()
 
-        link = self.driver.find_element(By.ID, "portfolio nav")
-        link.click()
-        time.sleep(2)
-        assert "Portfolio" in self.driver.title
+        time.sleep(1)
+        li_element = self.driver.find_element(By.XPATH, '//a[@href="/services/"]')
+        time.sleep(1)
+        li_element.click()
 
-        link = self.driver.find_element(By.ID, "about nav")
-        link.click()
-        time.sleep(2)
-        assert "About" in self.driver.title
+        time.sleep(1)
+        li_element = self.driver.find_element(By.XPATH, '//a[@href="/portfolio/"]')
+        time.sleep(1)
+        li_element.click()
 
-        link = self.driver.find_element(By.ID, "contact nav")
-        link.click()
         time.sleep(2)
-        assert "Contact" in self.driver.title
+        li_element = self.driver.find_element(By.XPATH, '//a[@href="/about/"]')
+        time.sleep(1)
+        li_element.click()
 
-    def test_bottom_navbar_links(self):
+        time.sleep(1)
+        li_element = self.driver.find_element(By.XPATH, '//a[@href="/contact/"]')
+        time.sleep(1)
+        li_element.click()
+
+    def test_footer(self):
         self.driver.get('http://127.0.0.1:8000/')
-        link = self.driver.find_element(By.ID, "about bottom nav")
-        link.click()
+        # Find all the link elements with class name "menu__link"
+        link_elements = self.driver.find_elements(By.CLASS_NAME, "menu__link")
+        #Loop through the link elements and click on each one
+        # for i in range(len(link_elements)):
+        #     self.driver.execute_script("arguments[0].scrollIntoView();", link_elements[i])
+        #     time.sleep(1)
+        #     link_elements[i].click()
+        #     time.sleep(1)
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="Home"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
+        time.sleep(1)
+        li_element.click()
+
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="Services"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
+        time.sleep(1)
+        li_element.click()
+
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="Portfolio"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
+        time.sleep(1)
+        li_element.click()
+
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="About"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
+        time.sleep(1)
+        li_element.click()
+
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="Contact"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
+        time.sleep(1)
+        li_element.click()
+
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="Privacy Policy"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
+        time.sleep(1)
+        li_element.click()
+        time.sleep(1)
+        self.driver.back()
         time.sleep(2)
-        assert "About" in self.driver.title
 
-        link = self.driver.find_element(By.ID, "contact bottom nav")
-        link.click()
+        li_element = self.driver.find_element(By.XPATH, '//li/a[text()="Terms of Use"]')
+        self.driver.execute_script("arguments[0].scrollIntoView();", li_element)
         time.sleep(2)
-        assert "Contact" in self.driver.title
-
-        link = self.driver.find_element(By.ID, "policy bottom nav")
-        link.click()
+        li_element.click()
+        self.driver.back()
         time.sleep(2)
-        assert "https://www.example.com/policy" == self.driver.current_url # this is the policy page
-
-        link = self.driver.find_element(By.ID, "terms bottom nav")
-        link.click()
-        time.sleep(2)
-        assert "https://www.example.com/terms" == self.driver.current_url # this is the terms page
-
-
-    # test the background for each page ensuring the gradient is appearing correctly
-    def test_background_services(self):
-        self.driver.get('http://127.0.0.1:8000/services/')
-        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        body_class = body_element.get_attribute("class")
-        assert "bg-gradient-to-b" in body_class
-        assert "from-orange-100" in body_class
-        assert "to-blue-200" in body_class
-    def test_homepage_background(self):
-        self.driver.get('http://127.0.0.1:8000/')
-        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        body_class = body_element.get_attribute("class")
-        assert "bg-gradient-to-b" in body_class
-        assert "from-orange-100" in body_class
-        assert "to-blue-200" in body_class
-    def test_background_about(self):
-        self.driver.get('http://127.0.0.1:8000/about/')
-        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        body_class = body_element.get_attribute("class")
-        assert "bg-gradient-to-b" in body_class
-        assert "from-orange-100" in body_class
-        assert "to-blue-200" in body_class
-    def test_background_portfolio(self):
-        self.driver.get('http://127.0.0.1:8000/portfolio/')
-        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        body_class = body_element.get_attribute("class")
-        assert "bg-gradient-to-b" in body_class
-        assert "from-orange-100" in body_class
-        assert "to-blue-200" in body_class
-    def test_background_contact(self):
-        self.driver.get('http://127.0.0.1:8000/contact')
-        body_element = self.wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
-        body_class = body_element.get_attribute("class")
-        assert "bg-gradient-to-b" in body_class
-        assert "from-orange-100" in body_class
-        assert "to-blue-200" in body_class

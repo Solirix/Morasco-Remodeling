@@ -1,7 +1,9 @@
 from django.test import TestCase
 import time
 
-# Create your tests here. 
+# this file tests to see if the correct templates are in use
+# it also tests to see if the correct background is being used for each page
+# lastly, it tests to see if the correct css is being used for the nav bar and footer
 
 # To run the enitre tests directory use: ./manage.py test core.tests
 # To run a specific test file use: ./manage.py test core.tests.test_name (without the .py extension)
@@ -92,3 +94,24 @@ class TemplateTests(TestCase):
         self.assertContains(response, 'class="entire_footer_container"')
         self.assertContains(response, 'class="menu"')
         self.assertContains(response, 'class="menu__link"')
+
+    def test_nav_bar(self):
+        response = self.client.get('/')
+        self.assertContains(response, 'class="buttons"')
+        self.assertContains(response, 'class="contact_us_button"')
+
+        response = self.client.get('/services/')
+        self.assertContains(response, 'class="buttons"')
+        self.assertContains(response, 'class="contact_us_button"')
+
+        response = self.client.get('/portfolio/')
+        self.assertContains(response, 'class="buttons"')
+        self.assertContains(response, 'class="contact_us_button"')
+
+        response = self.client.get('/about/')
+        self.assertContains(response, 'class="buttons"')
+        self.assertContains(response, 'class="contact_us_button"')
+
+        response = self.client.get('/contact/')
+        self.assertContains(response, 'class="buttons"')
+        self.assertContains(response, 'class="contact_us_button"')

@@ -1,5 +1,7 @@
+# this file tests the portfolio page to make sure that the correct html and css is being rendered
+# it also tests that the images are loading correctly
+
 from django.test import TestCase
-import requests
 
 class portfolio_page_tests(TestCase):
 
