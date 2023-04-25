@@ -25,6 +25,12 @@ position: relative;
   font-family: 'Gruppo', cursive !important;
   font-weight: 600;
   font-size: 30px;
+  margin-bottom: -20px;
+}
+.carousel-caption h4 {
+  font-family: 'Gruppo', cursive !important;
+  font-weight: 600;
+  font-size: 24px;
 }
 
 .slanted-shape {
