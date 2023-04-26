@@ -56,18 +56,18 @@ def test_rotating_word_animation(TestCase):
 class TestWebsiteTextSlideOne(TestCase):
 
     def test_slide_one(self):
-    driver = webdriver.Chrome()
-    driver.get("http://localhost:8000")
-    example_element = driver.find_element_by_class_name("carousel-caption")
-    p_element = example_element.find_element_by_tag_name("p")
-    assert p_element.text == "MORASCO REMODELING"
-    h5_element = example_element.find_element_by_tag_name("h5")
-    assert h5_element.text == "Quality | Experience | Affordable | Personalized"
-    h4_element = example_element.find_element_by_tag_name("h4")
-    assert h4_element.text == " With over 10 years of experience, we have the skills to help with almost all your remodeling and repairing needs."
-    a_element = example_element.find_element_by_tag_name("a")
-    assert a_element.text == "Lets Get Started!"
-    driver.quit()
+        driver = webdriver.Chrome()
+        driver.get("http://localhost:8000")
+        example_element = driver.find_element_by_class_name("carousel-caption")
+        p_element = example_element.find_element_by_tag_name("p")
+        assert p_element.text == "MORASCO REMODELING"
+        h5_element = example_element.find_element_by_tag_name("h5")
+        assert h5_element.text == "Quality | Experience | Affordable | Personalized"
+        h4_element = example_element.find_element_by_tag_name("h4")
+        assert h4_element.text == " With over 10 years of experience, we have the skills to help with almost all your remodeling and repairing needs."
+        a_element = example_element.find_element_by_tag_name("a")
+        assert a_element.text == "Lets Get Started!"
+        driver.quit()
     def test_slide_two(self):
         driver = webdriver.Chrome()
         driver.get("http://localhost:8000")
