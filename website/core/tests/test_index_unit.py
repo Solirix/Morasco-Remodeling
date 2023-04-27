@@ -117,6 +117,27 @@ class HomePageButtonTwo(TestCase):
         learn_more_button = self.driver.find_element_by_class_name("contact_us_button")
         learn_more_button.click()
         self.assertEqual(self.driver.current_url, self.live_server_url + "/contact/")
+class TestRotatingWord(TestCase):
+
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.get("http://localhost:8000")
+        self.wait = WebDriverWait(self.driver, 10)
+
+    def test_rotating_word(self):
+        rotating_word = self.wait.until(EC.visibility_of_element_located((By.ID, "rotating-word")))
+        initial_word = rotating_word.text
+        self.assertIsNotNone(initial_word)
+
+        words = ["BUILT", "DESIGNED", "DEVELOPED", "CREATED", "ENGINEERED", "MADE", "CONSTRUCTED", "CONCOCTED", "CONSTRUCTED"]
+        index = 0
+        for i in range(len(words)):
+            self.assertEqual(rotating_word.text, words[index])
+            index = (index + 1) % len(words)
+            self.driver.implicitly_wait(4) # Wait for 3.5 seconds plus some extra time
+         
+    def tearDown(self):
+        self.driver.quit()
 
 # TOMMYS SEC
 
