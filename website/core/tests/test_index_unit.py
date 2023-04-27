@@ -90,6 +90,34 @@ class TestWebsiteTextSlideOne(TestCase):
         a_element = example_element.find_element_by_tag_name("a")
         assert a_element.text == "Lets Get Started!"
         driver.quit()
+class HomePageButtonOne(TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(10)
+        self.driver.get("http://localhost:8000")
+
+    def tearDown(self):
+        self.driver.quit()
+
+    def test_see_all_services_button(self):
+        button = self.driver.find_element_by_xpath("//a[contains(text(),'See all the ways we can help')]")
+        button.click()
+        time.sleep(2)
+        self.assertEqual(self.driver.title, "Services")
+class HomePageButtonTwo(TestCase):
+    def setUp(self):
+        self.driver = webdriver.Chrome()
+        self.driver.implicitly_wait(10)
+
+    def tearDown(self):
+        self.driver.quit()
+
+    def test_learn_more_button(self):
+        self.driver.get(self.live_server_url)
+        learn_more_button = self.driver.find_element_by_class_name("contact_us_button")
+        learn_more_button.click()
+        self.assertEqual(self.driver.current_url, self.live_server_url + "/contact/")
+
 # TOMMYS SEC
 
 
