@@ -117,7 +117,7 @@ class HomePageButtonTwo(TestCase):
         learn_more_button = self.driver.find_element_by_class_name("contact_us_button")
         learn_more_button.click()
         self.assertEqual(self.driver.current_url, self.live_server_url + "/contact/")
-class TestRotatingWord(TestCase):
+class TestRotatingWordAnimation(TestCase):
 
     def setUp(self):
         self.driver = webdriver.Chrome()
@@ -138,7 +138,24 @@ class TestRotatingWord(TestCase):
          
     def tearDown(self):
         self.driver.quit()
+class TestWebsiteTextBottomSection(TestCase):
 
+    def test_slide_one(self):
+        driver = webdriver.Chrome()
+        driver.get("http://localhost:8000")
+        example_element = driver.find_element_by_class_name("cool-mes")
+        h1_element = example_element.find_element_by_tag_name("h1")
+        assert h1_element.text == "What are you waiting for?"
+
+        example_element = driver.find_element_by_class_name("cooler-mes")
+        h1_element = example_element.find_element_by_tag_name("h1")
+        assert h1_element.text == " LETS GET THAT -&gt  REMODELED"
+
+        example_element = driver.find_element_by_class_name("button-div")
+        a_element = example_element.find_element_by_tag_name("a")
+        assert a_element.text == "Lets Do It"
+
+        driver.quit()
 # TOMMYS SEC
 
 
