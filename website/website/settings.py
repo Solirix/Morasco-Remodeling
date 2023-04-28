@@ -32,7 +32,7 @@ CSRF_COOKIE_SECURE=config('CSRF_COOKIE_SECURE', cast = bool)
 SESSION_COOKIE_SECURE=config('SESSION_COOKIE_SECURE', cast = bool)
 SECURE_SSL_REDIRECT=config('SECURE_SSL_REDIRECT', cast = bool)
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['morasco-remodeling-test.herokuapp.com/']
 
 
 # Application definition
