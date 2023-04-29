@@ -32,7 +32,7 @@ CSRF_COOKIE_SECURE=config('CSRF_COOKIE_SECURE', cast = bool)
 SESSION_COOKIE_SECURE=config('SESSION_COOKIE_SECURE', cast = bool)
 SECURE_SSL_REDIRECT=config('SECURE_SSL_REDIRECT', cast = bool)
 
-ALLOWED_HOSTS = ['morasco-remodeling-test.herokuapp.com/']
+ALLOWED_HOSTS = ['https://morasco-remodeling-test.herokuapp.com/']
 
 
 # Application definition
@@ -124,8 +124,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'core'),)
+STATIC_ROOT = STATIC_ROOT = BASE_DIR / "staticfiles"
 django_heroku.settings(locals())
 
 # Default primary key field type
