@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from decouple import config # pip install python-decouple (for protection of secret key and debug mode)
-import django_heroku, dj_database_url, os
+import django_heroku, environ#, dj_database_url, os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -23,16 +23,21 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('SECRET_KEY') # protect secret key in production: config('SECRET_KEY')
+#SECRET_KEY = config('SECRET_KEY') # protect secret key in production: config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config('DEBUG', cast = bool) # protect debug mode in production: config('DEBUG', cast = bool)
+#DEBUG = config('DEBUG', cast = bool) # protect debug mode in production: config('DEBUG', cast = bool)
+env = environ.Env()
+# reading .env file
+environ.Env.read_env()
 
-CSRF_COOKIE_SECURE=config('CSRF_COOKIE_SECURE', cast = bool)
-SESSION_COOKIE_SECURE=config('SESSION_COOKIE_SECURE', cast = bool)
-SECURE_SSL_REDIRECT=config('SECURE_SSL_REDIRECT', cast = bool)
+# Raises django's ImproperlyConfigured exception if SECRET_KEY not in os.environ
+SECRET_KEY = 'abc'
 
-ALLOWED_HOSTS = ['https://morasco-remodeling-test.herokuapp.com/']
+DEBUG = False
+
+
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
