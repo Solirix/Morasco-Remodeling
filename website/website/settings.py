@@ -12,7 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 from decouple import config # pip install python-decouple (for protection of secret key and debug mode)
-import django_on_heroku
+import django_on_heroku, os
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -118,6 +118,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = 'static/'
 
